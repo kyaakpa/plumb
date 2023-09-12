@@ -15,10 +15,11 @@ import Image from "next/image";
 import { ChevronDown } from "@/components/Icons";
 import logo from "@/public/logo.png";
 import FormModal from "@/components/FormModal";
-import { usePathname } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function MainNav() {
   const pathname = usePathname().toString();
+  const router = useRouter();
 
   return (
     <Navbar>
@@ -67,27 +68,32 @@ export default function MainNav() {
           </NavbarItem>
           <DropdownMenu
             aria-label="ACME features"
-            className=""
             itemClasses={{
               base: "gap-4",
             }}
           >
-            <DropdownItem key="plumbing" description="Professional plumbing">
-              <Link href="/services/plumbing" className="text-slate-300">
-                Plumbing
-              </Link>
+            <DropdownItem
+              key="plumbing"
+              description="Professional plumbing"
+              onClick={() => router.push("/services/plumbing")}
+            >
+              Plumbing
             </DropdownItem>
 
-            <DropdownItem key="Heating" description="Warm your place">
-              <Link href="/services/heating" className="text-slate-300">
-                Heating
-              </Link>
+            <DropdownItem
+              key="Heating"
+              description="Warm your place"
+              onClick={() => router.push("/services/heating")}
+            >
+              Heating
             </DropdownItem>
 
-            <DropdownItem key="gas" description="Gas solutions">
-              <Link href="/services/gas" className="text-slate-300">
-                Gas
-              </Link>
+            <DropdownItem
+              key="gas"
+              description="Gas solutions"
+              onClick={() => router.push("/services/gas")}
+            >
+              Gas Fitting
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>

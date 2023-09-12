@@ -7,3 +7,8 @@
     1px 1px 0 black;
 }
 
+@layer components {
+  .footerItems {
+    @apply flex flex-col justify-center text-right;
+  }
+}
