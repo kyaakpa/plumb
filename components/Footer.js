@@ -4,15 +4,14 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-900 text-slate-200 mt-auto flex justify-evenly">
+    <footer className="hidden md:visible bg-zinc-900 text-slate-300 md:flex justify-evenly mt-12">
       <Link href="/">
         <Image src={logo} width={300} alt="logo" />
       </Link>
-
       <div className="footerItems">
         <h4>About Us</h4>
         <h4 className="font-bold">Mark J. Ahern</h4>
-        <p>Plumbing, Heating and Gas Fitting</p>
+        <p>Plumbing, Heating, Gas</p>
       </div>
       <div className="footerItems">
         <h4>Contact Us</h4>

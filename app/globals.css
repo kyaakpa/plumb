@@ -9,6 +9,6 @@
 
 @layer components {
   .footerItems {
-    @apply flex flex-col justify-center text-right;
+    @apply flex flex-col justify-center;
   }
 }

@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -10,6 +11,10 @@ import {
   Dropdown,
   DropdownMenu,
   Link,
+  NavbarMenuToggle,
+  NavbarMenuItem,
+  NavbarMenu,
+  menuItem
 } from "@nextui-org/react";
 import Image from "next/image";
 import { ChevronDown } from "@/components/Icons";
@@ -18,18 +23,36 @@ import FormModal from "@/components/FormModal";
 import { useRouter, usePathname } from "next/navigation";
 
 export default function MainNav() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname().toString();
   const router = useRouter();
 
+  const menuItems = [
+    "Home",
+    "Plumbing Services",
+    "Heating Services",
+    "Gas Services",
+    "About Us",
+    "Contact Us",
+  ];
+
   return (
-    <Navbar>
-      <NavbarBrand>
-        <Link href="/">
-          <Image src={logo} width={80} className="-ml-5" alt="logo" />
-          <span className="font-bold text-slate-200 text-lg">Mark J Ahern</span>
-        </Link>
-      </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+    <Navbar onMenuOpenChange={setIsMenuOpen}>
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="md:hidden"
+        />
+        <NavbarBrand>
+          <Link href="/">
+            <Image src={logo} width={75} className="-ml-5" alt="logo" />
+            <span className="font-bold text-slate-200 text-lg">
+              Mark J Ahern
+            </span>
+          </Link>
+        </NavbarBrand>
+      </NavbarContent>
+      <NavbarContent className="hidden md:flex gap-4" justify="center">
         <NavbarItem>
           <Link
             color="foreground"
@@ -112,10 +135,30 @@ export default function MainNav() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem>
+        <NavbarItem className="hidden md:block">
           <FormModal color="primary" variant="flat" />
         </NavbarItem>
       </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              color={
+                index === menuItems.length - 1
+                  ? "primary"
+                  : "foreground"
+              }
+              className="w-full"
+              href={
+                index === 0 ? "/" : index === 1 ? "/services/plumbing" : index === 2 ? "/services/heating" : index === 3 ? "/services/gas" : index === 4 ? "/about" : index === menuItems.length - 1 ? "/contact" : ""
+              }
+              size="lg"
+            >
+              {item}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 }
