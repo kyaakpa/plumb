@@ -38,10 +38,6 @@ export default function MainNav() {
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="md:hidden"
-        />
         <NavbarBrand>
           <Link href="/">
             <Image src={logo} width={75} className="-ml-5" alt="logo" />
@@ -134,6 +130,10 @@ export default function MainNav() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="md:hidden"
+        />
         <NavbarItem className="hidden md:block">
           <FormModal color="primary" variant="flat" />
         </NavbarItem>
