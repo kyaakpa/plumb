@@ -4,13 +4,14 @@ import Image from "next/image";
  
 export const metadata = {
   title: 'Home',
-  description: '...',
+  description: 'Homepage',
   Image: '@/public/logo.webp'
 }
 
 const Home = () => {
   return (
     <>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
       <div className="h-screen w-full">
         <div className="h-2/3 overflow-hidden">
           <Image
