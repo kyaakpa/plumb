@@ -36,7 +36,7 @@ export default function MainNav() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered>
       <NavbarContent>
         <NavbarBrand>
           <Link href="/">
@@ -48,7 +48,7 @@ export default function MainNav() {
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden md:flex gap-4" justify="center">
-        <NavbarItem>
+        <NavbarItem> 
           <Link
             color="foreground"
             href="/"
@@ -57,6 +57,7 @@ export default function MainNav() {
                 ? `text-blue-600 font-semibold rounded-lg text-lg`
                 : `text-lg`
             }
+            
           >
             Home
           </Link>

@@ -1,17 +1,17 @@
 import cambridgeImg from "@/public/cambridge.webp";
 
 import Image from "next/image";
- 
+
 export const metadata = {
-  title: 'Home',
-  description: 'Homepage',
-  Image: '@/public/logo.webp'
-}
+  title: "Home",
+  description: "Homepage",
+  Image: "@/public/logo.webp",
+};
 
 const Home = () => {
   return (
     <>
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <div className="h-screen w-full">
         <div className="h-2/3 overflow-hidden">
           <Image
@@ -21,7 +21,7 @@ const Home = () => {
             style={{
               objectFit: "cover",
               objectPosition: "50% -200px",
-              minHeight: "90vh"
+              minHeight: "90vh",
             }}
             alt="cambridge university"
             priority={true}
@@ -29,12 +29,13 @@ const Home = () => {
         </div>
         <div className=" text-right w-1/5 flex -mt-64">
           <h1 className="text-white text-3xl sm:text-5xl pr-6 font-bold bg-black pl-24 py-3 z-30">
-            Professional History of <span className="text-green-500">37</span>{" "}
+            Professional History of{" "}
+            <span className="text-green-500 sm:text-7xl text-5xl">37</span>{" "}
             Years
           </h1>
         </div>
         <div className="flex justify-start mt-8 z-2">
-          <p className="sm:w-4/5 w-[90%] bg-neutral-900 text-slate-200 sm:text-lg p-4 sm:pr-6 pl-24 text-justify z-40">
+          <p className="md:w-4/5 w-[90%] bg-neutral-900 text-slate-200 sm:text-lg p-4 sm:pr-6 pl-24 text-justify z-40">
             Here at Mark J. Ahern Inc., we have been proudly serving Boston and
             the surrounding areas since 1986. We are a small, full-service
             company, which allows a close personal relationship between our
@@ -47,10 +48,7 @@ const Home = () => {
             Ahern Inc., your satisfaction is our number one priority!
           </p>
         </div>
-            <div>
-              Our Partners:
-              
-            </div>
+        <div>Our Partners:</div>
       </div>
     </>
   );
