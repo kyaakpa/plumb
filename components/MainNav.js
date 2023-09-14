@@ -14,11 +14,10 @@ import {
   NavbarMenuToggle,
   NavbarMenuItem,
   NavbarMenu,
-  menuItem
 } from "@nextui-org/react";
 import Image from "next/image";
 import { ChevronDown } from "@/components/Icons";
-import logo from "@/public/logo.png";
+import logo from "@/public/logo.webp";
 import FormModal from "@/components/FormModal";
 import { useRouter, usePathname } from "next/navigation";
 
@@ -143,14 +142,22 @@ export default function MainNav() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={
-                index === menuItems.length - 1
-                  ? "primary"
-                  : "foreground"
-              }
+              color={index === menuItems.length - 1 ? "primary" : "foreground"}
               className="w-full"
               href={
-                index === 0 ? "/" : index === 1 ? "/services/plumbing" : index === 2 ? "/services/heating" : index === 3 ? "/services/gas" : index === 4 ? "/about" : index === menuItems.length - 1 ? "/contact" : ""
+                index === 0
+                  ? "/"
+                  : index === 1
+                  ? "/services/plumbing"
+                  : index === 2
+                  ? "/services/heating"
+                  : index === 3
+                  ? "/services/gas"
+                  : index === 4
+                  ? "/about"
+                  : index === menuItems.length - 1
+                  ? "/contact"
+                  : ""
               }
               size="lg"
             >
