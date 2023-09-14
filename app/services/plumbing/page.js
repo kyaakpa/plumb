@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Plumbing = () => {
   return (
     <div className=" mx-24 text-justify">
-      <h1 className="mt-12 text-4xl flex p-2">Plumbing Services <Image className='hidden ml-4 sm:block' src={spanner} width={40}/></h1>
+      <h1 className="mt-12 text-4xl flex p-2">Plumbing Services <Image className='hidden ml-4 sm:block' src={spanner} width={40} alt='spanner image'/></h1>
       <p className="pt-4">
         <span className="font-bold">
           Full Kitchen and Bathroom Installations:
