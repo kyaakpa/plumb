@@ -1,6 +1,12 @@
 import cambridgeImg from "@/public/cambridge.webp";
 
 import Image from "next/image";
+ 
+export const metadata = {
+  title: 'Home',
+  description: '...',
+  Image: '@/public/logo.webp'
+}
 
 const Home = () => {
   return (
@@ -40,6 +46,10 @@ const Home = () => {
             Ahern Inc., your satisfaction is our number one priority!
           </p>
         </div>
+            <div>
+              Our Partners:
+              
+            </div>
       </div>
     </>
   );
