@@ -1,9 +1,5 @@
 "use client";
 
-export const metadata = {
-  title: "Gas Fitting Service",
-  description: "Mark J Ahern gas fitting service",
-};
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 const Gas = () => {
