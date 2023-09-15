@@ -38,7 +38,7 @@ export default function MainNav() {
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen} isBordered>
       <NavbarContent>
-        <NavbarBrand>
+        <NavbarBrand isActive={false}>
           <Link href="/">
             <Image src={logo} width={75} className="-ml-5" alt="logo" />
             <span className="font-bold text-slate-200 text-lg">

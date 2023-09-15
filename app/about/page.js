@@ -1,4 +1,8 @@
-import React from "react";
+export const metadata = {
+  title: "About us",
+  description: "Mark J Ahern about us",
+};
+
 
 const About = () => {
   return (

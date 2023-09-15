@@ -4,8 +4,7 @@ import Image from "next/image";
 
 export const metadata = {
   title: "Home",
-  description: "Homepage",
-  Image: "@/public/logo.webp",
+  description: "Mark J Ahern Home",  
 };
 
 const Home = () => {
