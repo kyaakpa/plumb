@@ -27,7 +27,7 @@ const Home = () => {
           />
         </div>
         <div className=" text-right w-1/5 flex -mt-64">
-          <h1 className="text-white text-3xl sm:text-5xl pr-6 font-bold bg-black pl-24 py-3 z-30">
+          <h1 className="text-white text-3xl sm:text-5xl pr-6 font-bold bg-black pl-24 py-3 z-10">
             Professional History of{" "}
             <span className="text-green-500 sm:text-7xl text-5xl">37</span>{" "}
             Years

@@ -139,12 +139,12 @@ export default function MainNav() {
           <FormModal color="primary" variant="flat" />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="z-40 items-center">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color={index === menuItems.length - 1 ? "primary" : "foreground"}
-              className="w-full"
+              className="w-full text-xl"
               href={
                 index === 0
                   ? "/"
