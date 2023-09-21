@@ -42,13 +42,13 @@ export default function MainNav() {
           <Link href="/">
             <Image src={logo} width={75} className="-ml-5" alt="logo" />
             <span className="font-bold text-slate-200 text-lg">
-              Mark J Ahern
+              Mark J Ahern Inc.
             </span>
           </Link>
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="hidden md:flex gap-4" justify="center">
-        <NavbarItem> 
+        <NavbarItem>
           <Link
             color="foreground"
             href="/"
@@ -57,7 +57,6 @@ export default function MainNav() {
                 ? `text-blue-600 font-semibold rounded-lg text-lg`
                 : `text-lg`
             }
-            
           >
             Home
           </Link>

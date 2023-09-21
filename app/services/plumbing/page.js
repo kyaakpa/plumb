@@ -8,15 +8,15 @@ export const metadata = {
 
 const Plumbing = () => {
   return (
-    <div className=" mx-24 text-justify">
+    <div className="md:mx-24 mx-12 ">
       <h1 className="mt-12 text-4xl flex p-2">
-        Plumbing Services{" "}
         <Image
-          className="hidden ml-4 sm:block"
+          className="mr-4 sm:block hidden"
           src={spanner}
           width={40}
           alt="spanner image"
         />
+        Plumbing Services
       </h1>
       <p className="pt-4">
         <span className="font-bold">
