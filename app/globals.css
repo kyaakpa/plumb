@@ -2,13 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-stroke {
-  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
-    1px 1px 0 black;
+.text-shadow {
+  text-shadow: 0 8px 16px black);
 }
 
 @layer components {
   .footerItems {
     @apply flex flex-col justify-center;
   }
+}
+
+@layer base {
+
+  .input-form {
+    @apply p-3 rounded-xl outline-none border  bg-transparent;
+  }
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
 }

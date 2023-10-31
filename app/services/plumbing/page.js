@@ -1,4 +1,4 @@
-import spanner from "@/public/spanner.webp";
+import spanner from "@/public/spanner-dark.webp";
 import Image from "next/image";
 
 export const metadata = {

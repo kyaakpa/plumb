@@ -1,6 +1,7 @@
 import cambridgeImg from "@/public/cambridge.webp";
 
 import Image from "next/image";
+import Map from "@/components/Map";
 
 export const metadata = {
   title: "Home",
@@ -11,8 +12,8 @@ const Home = () => {
   return (
     <>
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      <div className="h-screen w-full">
-        <div className="h-2/3 overflow-hidden">
+      <div className="h-[60vh] w-full">
+        <div className="h-[60vh] overflow-hidden">
           <Image
             src={cambridgeImg}
             width={2000}
@@ -20,21 +21,25 @@ const Home = () => {
             style={{
               objectFit: "cover",
               objectPosition: "50% -200px",
-              minHeight: "90vh",
+              minWidth: "450px",
+              maxHeight: "80vh",
+              minHeight: "80vh",
             }}
             alt="cambridge university"
             priority
           />
         </div>
-        <div className=" text-right w-1/5 flex -mt-96">
-          <h1 className="text-white text-3xl sm:text-5xl pr-6 font-bold bg-black md:pl-24 pl-8 py-3 z-10">
+      </div>
+      <div className="flex justify-center flex-col items-center -mt-32 max-sm:-mt-80">
+        <div className="flex flex-col items-center shadow-2xl rounded-3xl opacity-95 bg-gradient-to-l from-yellow-50 to-blue-100 sm:w-3/4 max-sm:mx-6 p-3">
+          <h1 className="text-3xl sm:text-5xl font-bold p-4 z-50 place-self-center bg-gradient-to-r md:text-center from-blue-700 to-red-500 text-transparent bg-clip-text">
             Professional History of{" "}
-            <span className="text-green-500 sm:text-7xl text-5xl">37</span>{" "}
+            <span className="text-6xl max-sm:text-4xl tracking-tighter">
+              37
+            </span>{" "}
             Years
           </h1>
-        </div>
-        <div className="flex justify-start mt-8 z-2">
-          <p className="md:w-4/5 w-[95%] bg-neutral-900 text-slate-200 sm:text-lg p-4 sm:pr-6 md:pl-24 pl-8 md:text-justify z-40">
+          <p className="text-center sm:text-xl md:px-12 py-8 px-2 font-medium">
             Here at Mark J. Ahern Inc., we have been proudly serving The Greater
             Boston since 1986. We are a small, full-service company, which
             allows a close personal relationship between our clients and our
@@ -47,7 +52,20 @@ const Home = () => {
             your satisfaction is our number one priority!
           </p>
         </div>
-        <div className="text-2xl ">Our Partners:</div>
+      </div>
+      <div className="p-4 mt-48 flex flex-col justify-center items-center gap-4">
+        <h1 className="md:text-6xl text-3xl p-2 font-bold tracking-tighter text-neutral-800 drop-shadow-xl">
+          Contact Us
+        </h1>
+        <div className="flex flex-col p-6 gap-3  [&>input]:input-form max-sm:[&>input]:p-2">
+          <input placeholder="Name" />
+          <input placeholder="Email" />
+          <input placeholder="Phone" />
+          <textarea placeholder="Description" className="input-form" />
+          <button className="py-2 px-4 rounded-lg bg-blue-200 font-medium text-2xl mt-6 hover:shadow-blue-300 hover:shadow-lg hover:bg-blue-300">
+            Submit
+          </button>
+        </div>
       </div>
     </>
   );

@@ -19,18 +19,25 @@ export default function FormModal() {
       <Button onPress={onOpen} className="bg-primary/20 text-primary text-base">
         Contact Us
       </Button>
-      <Modal backdrop="blur" isOpen={isOpen} onOpenChange={onOpenChange}>
-        <ModalContent >
+      <Modal
+        backdrop="blur"
+        isOpen={isOpen}
+        size="3xl"
+        onOpenChange={onOpenChange}
+      >
+        <ModalContent>
           {(onClose) => (
             <>
               <div className="flex">
                 <ModalHeader className="flex flex-col gap-1 w-1/2">
                   Mailing Address
                 </ModalHeader>
-                <ModalHeader className="pr-8 w-1/2">Any Questions ?</ModalHeader>
+                <ModalHeader className="pr-8 w-1/2">
+                  Any Questions ?
+                </ModalHeader>
               </div>
-              <div className="flex">
-                <ModalBody className="text-xs border-r-1 w-1/2 ">
+              <div className="flex w-full">
+                <ModalBody className="border-r-1 w-1/2">
                   <p className="flex flex-col">
                     <span>Mark J. Ahern, Inc.</span>
                     <span>4 Cortland Lane</span>
@@ -42,30 +49,27 @@ export default function FormModal() {
                     <span>Email: Mark@Markjaherninc.com</span>
                   </p>
                 </ModalBody>
-                <ModalBody className="w-1/2 ">
+                <ModalBody>
                   <Input
-                    size="sm"
+                    size="md"
                     type="text"
                     label="Name"
                     placeholder="Enter your name"
                   />
                   <Input
-                    size="sm"
                     type="email"
                     label="Email"
                     placeholder="Enter your email"
                   />
                   <Input
-                    size="sm"
+                    size="md"
                     type="text"
                     label="Phone"
                     placeholder="Enter your phone"
                   />
                   <Textarea
                     label="Description"
-                    labelPlacement="outside"
-                    placeholder="Enter your description"
-                    className="max-w-xs"
+                    placeholder="How can we help you?"
                   />
                 </ModalBody>
               </div>

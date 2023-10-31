@@ -17,7 +17,7 @@ import {
 } from "@nextui-org/react";
 import Image from "next/image";
 import { ChevronDown } from "@/components/Icons";
-import logo from "@/public/logo.webp";
+import logo from "@/public/logo-black.webp";
 import FormModal from "@/components/FormModal";
 import { useRouter, usePathname } from "next/navigation";
 
@@ -39,9 +39,9 @@ export default function MainNav() {
     <Navbar onMenuOpenChange={setIsMenuOpen} isBordered>
       <NavbarContent>
         <NavbarBrand isActive={false}>
-          <Link href="/">
+          <Link href="/" className="hover:cursor-default">
             <Image src={logo} width={75} className="-ml-5" alt="logo" />
-            <span className="font-bold text-slate-200 text-lg">
+            <span className="font-bold text-black text-lg">
               Mark J Ahern Inc.
             </span>
           </Link>
@@ -138,7 +138,7 @@ export default function MainNav() {
           <FormModal color="primary" variant="flat" />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="z-40 items-center">
+      <NavbarMenu className="z-40 items-center gap-6 pt-24">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link

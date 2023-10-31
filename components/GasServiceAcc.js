@@ -13,7 +13,7 @@ const GasServiceAcc = () => {
 
   const item4 =
     "Gas efficiency testing, often referred to as combustion analysis, evaluates how efficiently a gas heating system is burning fuel. It measures various factors, such as the ratio of air to fuel, flue gas temperature, and the presence of harmful emissions like carbon monoxide. Efficiency testing helps identify areas where adjustments can be made to improve the system's overall efficiency, reduce fuel consumption, and lower operating costs. It also ensures that the heating system meets safety standards and environmental regulations.";
-  
+
   return (
     <Accordion
       defaultExpandedKeys={["1"]}
@@ -44,7 +44,9 @@ const GasServiceAcc = () => {
         key="4"
         aria-label="Gas Efficiency Testing"
         title="Gas Efficiency Testing"
-      ></AccordionItem>
+      >
+        {item4}
+      </AccordionItem>
     </Accordion>
   );
 };
