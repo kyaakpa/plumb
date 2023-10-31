@@ -46,7 +46,7 @@ export default function FormModal() {
                   <p className="flex flex-col">
                     <span>Phone: (617) 492-5198</span>
                     <span>Fax: (617) 864-0295</span>
-                    <span>Email: Mark@Markjaherninc.com</span>
+                    <span>Email: Markjaherninc@gmail.com</span>
                   </p>
                 </ModalBody>
                 <ModalBody>
