@@ -53,11 +53,11 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <div className="p-4 mt-48 flex flex-col justify-center items-center gap-4">
+      <div className="p-4 mt-48 flex flex-col justify-center items-center gap-4 w-full">
         <h1 className="md:text-6xl text-3xl p-2 font-bold tracking-tighter text-neutral-800 drop-shadow-xl">
           Contact Us
         </h1>
-        <div className="flex flex-col p-6 gap-3  [&>input]:input-form max-sm:[&>input]:p-2">
+        <div className="flex flex-col p-6 gap-3  [&>input]:input-form max-sm:[&>input]:p-2 md:w-1/2 max-md:w-[400px]">
           <input placeholder="Name" />
           <input placeholder="Email" />
           <input placeholder="Phone" />
