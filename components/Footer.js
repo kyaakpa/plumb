@@ -11,7 +11,7 @@ const Footer = () => {
           <li>4 Cortland Lane</li>
           <li>Lynnfield, MA 01940</li>
           <li>
-            Phone: <a href="tel:(617) 491-5198">(617) 491-5198</a>
+            Phone: <a href="tel:+1 (617) 491-5198">(617) 491-5198</a>
           </li>
           <li>Fax: (617) 864-0295</li>
           <li>
