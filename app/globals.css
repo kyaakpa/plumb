@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-shadow {
-  text-shadow: 0 8px 16px black);
-}
-
 @layer components {
   .footerItems {
     @apply flex flex-col justify-center;
@@ -13,7 +9,6 @@
 }
 
 @layer base {
-
   .input-form {
     @apply p-3 rounded-xl outline-none border  bg-transparent;
   }

@@ -7,13 +7,24 @@ const Footer = () => {
     <footer className="hidden md:visible bg-blue-600 mt-16 text-white md:flex justify-evenly">
       <div className="footerItems">
         <h4>Contact Us</h4>
-        <section>
-          <p>4 Cortland Lane</p>
-          <p>Lynnfield, MA 01940</p>
-          <p>Phone: (617) 491-5198</p>
-          <p>Fax: (617) 864-0295</p>
-          <p>Email: Markjaherninc@gmail.com</p>
-        </section>
+        <ul>
+          <li>4 Cortland Lane</li>
+          <li>Lynnfield, MA 01940</li>
+          <li>
+            Phone: <a href="tel:(617) 491-5198">(617) 491-5198</a>
+          </li>
+          <li>Fax: (617) 864-0295</li>
+          <li>
+            Email:
+            <a
+              href="mailto:markjaherninc@gmail.com?subject=Enquire"
+              className="hover:text-green-300"
+            >
+              {" "}
+              Markjaherninc@gmail.com
+            </a>
+          </li>
+        </ul>
       </div>
       <ul className="footerItems">
         <li>
@@ -32,7 +43,7 @@ const Footer = () => {
       <div></div>
 
       <Link href="/">
-        <Image src={logo} width={300} alt="logo" />
+        <Image src={logo} width={400} alt="logo" />
       </Link>
     </footer>
   );
