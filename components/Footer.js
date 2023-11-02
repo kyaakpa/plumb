@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="hidden md:visible bg-neutral-950 mt-16 text-slate-300 md:flex justify-evenly">
+    <footer className="hidden md:visible bg-blue-600 mt-16 text-white md:flex justify-evenly">
       <div className="footerItems">
         <h4>Contact Us</h4>
         <section>

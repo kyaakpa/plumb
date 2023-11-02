@@ -17,33 +17,38 @@ const GasServiceAcc = () => {
   return (
     <Accordion
       defaultExpandedKeys={["1"]}
-      className="w-3/4 h-[60vh] mx-auto pt-12"
+      className="w-3/4 h-[60vh] mx-auto mb-12 pt-12 [&>AccordionItem]:font-bold"
+      variant="splitted"
     >
       <AccordionItem
         key="1"
         aria-label="Oil to Gas Burner Conversions"
-        title="Oil to Gas Burner Conversions"
+        title={<strong>Oil to Gas Burner Conversions</strong>}
+        subtitle="Press to expand"
       >
-        {item1}
+        <span>{item1}</span>
       </AccordionItem>
       <AccordionItem
         key="2"
         aria-label="Full/Partial Gas System Installations"
-        title="Full/Partial Gas System Installations"
+        title={<strong>Full/Partial Gas System Installations</strong>}
+        subtitle="Press to expand"
       >
         {item2}
       </AccordionItem>
       <AccordionItem
         key="3"
         aria-label="Gas Burner Maintenance"
-        title="Gas Burner Maintenance"
+        title={<strong>Gas Burner Maintenance</strong>}
+        subtitle="Press to expand"
       >
         {item3}
       </AccordionItem>
       <AccordionItem
         key="4"
         aria-label="Gas Efficiency Testing"
-        title="Gas Efficiency Testing"
+        title={<strong>Gas Efficiency Testing</strong>}
+        subtitle="Press to expand"
       >
         {item4}
       </AccordionItem>

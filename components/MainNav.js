@@ -89,6 +89,8 @@ export default function MainNav() {
             itemClasses={{
               base: "gap-4",
             }}
+            variant="light"
+            color="primary"
           >
             <DropdownItem
               key="plumbing"

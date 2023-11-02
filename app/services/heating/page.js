@@ -5,8 +5,8 @@ export const metadata = {
 
 const Heating = () => {
   return (
-    <div className="mx-24 text-justify ">
-      <ul className="text-justify [&>li]:pl-3 [&>h4]:text-xl [&>h4]:mt-4  list-disc">
+    <div className="flex justify-center mb-20">
+      <ul className="[&>li]:pl-3 [&>h4]:text-xl [&>h4]:mt-6 [&>h4]:pb-2 [&>h4]:font-semibold  list-disc w-2/3">
         <h4 className="">Efficient Condensing Boilers:</h4>
         <li>
           Condensing boilers are highly efficient, modern heating systems that
@@ -20,7 +20,7 @@ const Heating = () => {
           efficiency, as it extracts additional heat from the flue gases,
           resulting in lower fuel consumption and reduced energy bills.
         </li>
-      <h4 className="text-xl">Forced Hot Water Boilers/Systems:</h4>
+        <h4 className="text-xl">Forced Hot Water Boilers/Systems:</h4>
         <li>
           Forced hot water systems, also known as hydronic heating systems, use
           a boiler to heat water, and then pumps circulate the hot water through
@@ -32,7 +32,7 @@ const Heating = () => {
           comfortable indoor environment. They are often preferred for their
           efficiency and versatility.
         </li>
-      <h4>Steam Boilers/Systems:</h4>
+        <h4>Steam Boilers/Systems:</h4>
         <li>
           Steam boilers use heat to turn water into steam, and the steam is then
           circulated through pipes to radiators or convectors to heat a space.
@@ -43,7 +43,7 @@ const Heating = () => {
           tend to be less energy-efficient compared to hot water systems and may
           have slower response times.
         </li>
-      <h4>Forced Hot Air:</h4>
+        <h4>Forced Hot Air:</h4>
         <li>
           Forced hot air systems use a furnace to heat air, which is then blown
           through ducts to various rooms in a building via vents or registers.
@@ -53,7 +53,7 @@ const Heating = () => {
           and cooling by integrating an air conditioner or heat pump. They are
           commonly found in many residential homes.
         </li>
-      <h4>Hydro Air Systems:</h4>
+        <h4>Hydro Air Systems:</h4>
         <li>
           Hydro air systems combine elements of both forced hot water and forced
           hot air systems. They use a boiler to heat water, which is then
@@ -64,7 +64,7 @@ const Heating = () => {
           Hydro air systems offer the flexibility of using both radiant heating
           (via hot water) and forced hot air heating in a single system.
         </li>
-      <h4>Solar Heating Systems:</h4>
+        <h4>Solar Heating Systems:</h4>
         <li>
           Solar heating systems harness energy from the sun to heat a building's
           air or water. There are two main types: passive and active.
