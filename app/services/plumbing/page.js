@@ -10,7 +10,7 @@ export const metadata = {
 
 const Plumbing = () => {
   return (
-    <div className="max-md:mx-8 max-md:mb-36 lg:mx-20 xl:mx-32 flex flex-col justify-center items-center">
+    <div className="max-md:mx-8 lg:mx-20 xl:mx-48 2xl:mx-64 flex flex-col justify-center items-center mb-32">
       <h1 className="my-12 text-5xl font-semibold flex p-2 text-neutral-800">
         <Image
           className="mr-4 max-md:hidden"
