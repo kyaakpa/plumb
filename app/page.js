@@ -41,7 +41,7 @@ const Home = () => {
             </span>{" "}
             Years
           </h1>
-          <p className="text-center md:text-xl md:px-12 pb-8 pt-4 px-2 font-medium">
+          <p className="text-center md:text-xl md:px-12 pb-8 pt-4 px-2 font-medium italic">
             Here at Mark J. Ahern Inc., we have been proudly serving The Greater
             Boston since 1986. We are a small, full-service company, which
             allows a close personal relationship between our clients and our
