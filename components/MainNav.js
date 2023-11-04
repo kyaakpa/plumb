@@ -41,7 +41,7 @@ export default function MainNav() {
         <NavbarBrand isActive={false}>
           <Link href="/" className="hover:cursor-default">
             <Image src={logo} width={75} className="-ml-5" alt="logo" />
-            <span className="font-bold text-black text-lg">
+            <span className="font-bold text-black text-xl">
               Mark J Ahern Inc.
             </span>
           </Link>

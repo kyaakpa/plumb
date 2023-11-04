@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="light">
+    <html lang="en" className="light min-w-[300px]">
       <body className={inter.className}>
         <Providers>
           <MainNav />
