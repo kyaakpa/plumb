@@ -38,7 +38,7 @@ export default function MainNav() {
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen} isBordered>
       <NavbarContent>
-        <NavbarBrand isActive={false}>
+        <NavbarBrand>
           <Link href="/" className="hover:cursor-default">
             <Image src={logo} width={75} className="-ml-5" alt="logo" />
             <span className="font-bold text-black text-xl">
@@ -89,7 +89,7 @@ export default function MainNav() {
             itemClasses={{
               base: "gap-4",
             }}
-            variant="light"
+            variant="solid"
             color="primary"
           >
             <DropdownItem

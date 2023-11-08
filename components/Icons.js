@@ -23,6 +23,7 @@ export const ChevronDown = ({ fill, size, height, width, ...props }) => {
 export const EmailIcon = ({ size, ...props }) => {
   return (
     <svg
+      fill="#222"
       xmlns="http://www.w3.org/2000/svg"
       height={size || 72}
       viewBox="0 -960 960 960"

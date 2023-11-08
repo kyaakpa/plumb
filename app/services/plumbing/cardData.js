@@ -6,7 +6,7 @@ export const PlumbServices = [
     content: [
       `Install sinks, faucets, garbage disposals, dishwashers`,
       `Connect to water supply and drainage systems`,
-      `Ensure no leaks or drainage issues for long-term functionality and aesthetics`,
+      `No leaks or drainage issues for long-term functionality and aesthetics`,
     ],
   },
   {

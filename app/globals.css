@@ -28,3 +28,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #333;
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

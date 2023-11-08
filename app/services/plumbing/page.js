@@ -34,8 +34,9 @@ const Plumbing = () => {
               <ul className="pt-2 font-medium text-lg">
                 {data.content.map((item, itemIndex) => {
                   return (
-                    <li key={itemIndex} className="flex gap-2">
-                      <Done /> <span className="w-full">{item}</span>
+                    <li key={itemIndex} className="flex gap-2 py-2">
+                      <Done />
+                      <span className="w-full">{item}</span>
                     </li>
                   );
                 })}
