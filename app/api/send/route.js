@@ -12,14 +12,14 @@ export async function POST(req) {
   try {
     const data = await resend.emails.send({
       from: `${name} <onboarding@resend.dev>`,
-      to: ["soheatshrestha@gmail.com"],
+      to: ["urkennam77@gmail.com"],
       subject: "We have received your message",
-      react: EmailTemplate({
-        name: name,
-        desc: desc,
-        phone: phone,
-        email: email,
-      }),
+      html: `
+      <p>Name: ${name}</p>
+      <p>Phone: ${phone}</p>
+      <p>Email: ${email}</p>
+      <p>Description: ${desc}</p>
+      `,
     });
     return NextResponse.json({ message: "ok" });
   } catch (error) {
