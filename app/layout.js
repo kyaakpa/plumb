@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <MainNav />
           {children}
-          <FormModal className="fixed bottom-[10px] right-[10px] " />
+          <FormModal className="fixed bottom-[10px] right-[10px] lg:hidden" />
           <Footer />
         </Providers>
       </body>
