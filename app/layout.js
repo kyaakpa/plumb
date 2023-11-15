@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Providers } from "./providers";
 import MainNav from "@/components/MainNav";
 import Footer from "@/components/Footer";
+import FormModal from "@/components/FormModal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <MainNav />
           {children}
+          <FormModal className="fixed bottom-[10px] right-[10px] " />
           <Footer />
         </Providers>
       </body>

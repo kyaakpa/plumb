@@ -1,15 +1,16 @@
+"use client";
 import React from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import "./styles.css";
+import "@/styles/slider.css";
 
-const animation = { duration: 5000, easing: (t) => t };
+const animation = { duration: 8000, easing: (t) => t };
 
 export default function Slider() {
   const [sliderRef] = useKeenSlider({
     loop: true,
     renderMode: "performance",
-    drag: false,
+    drag: true,
     created(s) {
       s.moveToIdx(5, true, animation);
     },

@@ -2,7 +2,7 @@ import GasServiceAcc from "@/components/GasServiceAcc";
 
 const Gas = () => {
   return (
-    <div className="h-[80vh]">
+    <div>
       <GasServiceAcc />
     </div>
   );

@@ -14,12 +14,14 @@ const ContactUs = () => {
   } = useForm();
 
   const [isLoading, setIsLoading] = useState(false);
+  const url = "https://markjahern.vercel.app/api/send";
+  const localURL = "http://localhost:3000/api/send";
 
   const onSubmit = async (data, e) => {
     setIsLoading(true);
     e.preventDefault();
     try {
-      const response = await fetch("https://markjahern.vercel.app/api/send", {
+      const response = await fetch(localURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

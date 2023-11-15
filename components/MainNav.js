@@ -32,11 +32,11 @@ export default function MainNav() {
     "Heating Services",
     "Gas Services",
     "About Us",
-    "Contact Us",
+    "Incentives",
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} isBordered>
+    <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarBrand>
           <Link href="/" className="hover:cursor-default">
@@ -47,7 +47,7 @@ export default function MainNav() {
           </Link>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden md:flex gap-4" justify="center">
+      <NavbarContent className="hidden lg:flex gap-4" justify="center">
         <NavbarItem>
           <Link
             color="foreground"
@@ -65,7 +65,7 @@ export default function MainNav() {
           <NavbarItem>
             <DropdownTrigger>
               <Button
-                className="bg-transparent data-[hover=true]:bg-transparent text-lg pr-1"
+                className="bg-transparent data-[hover=true]:bg-transparent text-lg p-1 pr-0"
                 endContent={<ChevronDown fill="currentColor" size={13} />}
                 radius="sm"
                 variant="light"
@@ -124,19 +124,32 @@ export default function MainNav() {
             className={
               pathname === "/about"
                 ? `text-blue-600 font-semibold rounded-lg text-lg`
-                : `text-lg`
+                : `text-lg -ml-2`
             }
           >
             About Us
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            color="foreground"
+            href="/incentives"
+            className={
+              pathname === "/incentives"
+                ? `text-blue-600 font-semibold rounded-lg text-lg`
+                : `text-lg`
+            }
+          >
+            Incentives
           </Link>
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="md:hidden"
+          className="lg:hidden"
         />
-        <NavbarItem className="hidden md:block">
+        <NavbarItem className="block max-lg:hidden">
           <FormModal color="primary" variant="flat" />
         </NavbarItem>
       </NavbarContent>
@@ -144,7 +157,7 @@ export default function MainNav() {
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              color={index === menuItems.length - 1 ? "primary" : "foreground"}
+              color="foreground"
               className="w-full text-xl"
               href={
                 index === 0
@@ -158,7 +171,7 @@ export default function MainNav() {
                   : index === 4
                   ? "/about"
                   : index === menuItems.length - 1
-                  ? "/contact"
+                  ? "/incentives"
                   : ""
               }
               size="lg"

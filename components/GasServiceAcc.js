@@ -12,12 +12,12 @@ const GasServiceAcc = () => {
     "Gas burner maintenance is essential for ensuring the safe and efficient operation of gas heating systems. Routine maintenance involves inspecting and cleaning burners, checking ignition systems, and testing safety controls. Regular maintenance also includes inspecting gas lines for leaks, ensuring proper ventilation and exhaust, and replacing worn or damaged components. Maintenance helps prevent breakdowns, ensures optimal combustion, and extends the lifespan of gas burners and heating equipment.";
 
   const item4 =
-    "Gas efficiency testing, often referred to as combustion analysis, evaluates how efficiently a gas heating system is burning fuel. It measures various factors, such as the ratio of air to fuel, flue gas temperature, and the presence of harmful emissions like carbon monoxide. Efficiency testing helps identify areas where adjustments can be made to improve the system's overall efficiency, reduce fuel consumption, and lower operating costs. It also ensures that the heating system meets safety standards and environmental regulations.";
+    "Gas efficiency testing, o8ften referred to as combustion analysis, evaluates how efficiently a gas heating system is burning fuel. It measures various factors, such as the ratio of air to fuel, flue gas temperature, and the presence of harmful emissions like carbon monoxide. Efficiency testing helps identify areas where adjustments can be made to improve the system's overall efficiency, reduce fuel consumption, and lower operating costs. It also ensures that the heating system meets safety standards and environmental regulations.";
 
   return (
     <Accordion
       defaultExpandedKeys={["1"]}
-      className="w-3/4 h-[60vh] mx-auto mb-12 pt-12 [&>AccordionItem]:font-bold"
+      className="lg:w-3/4 w-[95%] mx-auto mb-12 pt-12 [&>AccordionItem]:font-bold"
       variant="splitted"
     >
       <AccordionItem
