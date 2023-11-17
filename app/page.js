@@ -2,7 +2,6 @@ import Image from "next/image";
 import ContactUs from "@/components/ContactUs";
 import Slider from "@/components/Slider";
 import front from "@/public/front.webp";
-import { Plus } from "@/components/Icons";
 
 export const metadata = {
   title: "Home",
@@ -12,17 +11,6 @@ export const metadata = {
 const Home = () => {
   return (
     <>
-      {/* <div className="flex h-[90vh] w-full min-w-full justify-between overflow-hidden">
-        <div className="bg-gradient-to-r from-slate-800 to-transparent">
-          <h1 className="text-4xl w-[600px] ">70+ years of Plumbing</h1>
-        </div>
-        <div className="min-w-[640px] max-w-[800px] fixed bg-black right-0 -z-10">
-          <div className="bg-white">
-            <Image src={front} alt="plumbing system" className="-z-10 " />
-          </div>
-        </div>
-      </div> */}
-
       <div>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <div className="h-[60vh] w-full">

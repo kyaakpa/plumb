@@ -13,8 +13,8 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Providers>
           <MainNav />
+          <FormModal styling="max-lg:fixed right-4 bottom-4 lg:hidden" />
           {children}
-          <FormModal className="fixed bottom-[10px] right-[10px] lg:hidden" />
           <Footer />
         </Providers>
       </body>

@@ -14,7 +14,7 @@ import {
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 
-export default function FormModal({ className }) {
+export default function FormModal({ styling }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const {
@@ -54,7 +54,7 @@ export default function FormModal({ className }) {
 
   return (
     <div
-      className={`max-lg:${className} max-lg:transition max-lg:ease-in max-lg:duration-250`}
+      className={`${styling} max-lg:transition max-lg:ease-in max-lg:duration-250`}
     >
       <ToastContainer />
       <Button
@@ -93,7 +93,7 @@ export default function FormModal({ className }) {
           {(onClose) => (
             <>
               <div className="flex">
-                <ModalHeader className="flex flex-col gap-1 w-1/2">
+                <ModalHeader className="flex flex-col gap-1 w-1/2 max-lg:hidden">
                   Mailing Address
                 </ModalHeader>
                 <ModalHeader className="pr-8 w-1/2">
@@ -101,7 +101,7 @@ export default function FormModal({ className }) {
                 </ModalHeader>
               </div>
               <div className="flex w-full">
-                <ModalBody className="border-r-1 w-1/2">
+                <ModalBody className="border-r-1 w-1/2 max-lg:hidden">
                   <p className="flex flex-col">
                     <span>Mark J. Ahern, Inc.</span>
                     <span>4 Cortland Lane</span>
