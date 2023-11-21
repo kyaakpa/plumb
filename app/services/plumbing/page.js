@@ -20,27 +20,40 @@ const Plumbing = () => {
         />
         Plumbing Services
       </h1>
-      <div className="flex gap-6 justify-center flex-wrap max-md:flex-col">
+      <div className="flex gap-6 max-sm:gap-14 justify-center flex-wrap max-md:flex-col -z-10">
         {PlumbServices.map((data, index) => {
           return (
             <div
-              key={index} // Add a unique key prop here
-              className={`p-8 rounded-3xl ${data.color}`}
+              key={index}
+              className={`relative p-0 rounded-3xl`}
               style={{ flexBasis: "calc(50% - 2rem)" }}
             >
-              <h4 className={`font-bold text-xl ${data.headingColor}`}>
-                {data.title}
-              </h4>
-              <ul className="pt-2 font-medium text-lg">
-                {data.content.map((item, itemIndex) => {
-                  return (
-                    <li key={itemIndex} className="flex gap-2 py-2">
-                      <Done />
-                      <span className="w-full">{item}</span>
-                    </li>
-                  );
-                })}
-              </ul>
+              <div className="overflow-hidden h-[50vh] min-w-[400px]">
+                <Image
+                  src={data.picture}
+                  width={1000}
+                  height={64}
+                  alt={data.altText}
+                  className="-z-20 rounded-t-2xl"
+                />
+              </div>
+              <div
+                className={`rounded-b-2xl relative bottom-20 p-8 opacity-90 [&>*]:opacity-100 ${data.color}`}
+              >
+                <h4 className={`font-bold text-xl ${data.headingColor}`}>
+                  {data.title}
+                </h4>
+                <ul className="pt-2 font-medium text-lg">
+                  {data.content.map((item, itemIndex) => {
+                    return (
+                      <li key={itemIndex} className="flex gap-2 py-2">
+                        <Done />
+                        <span className="w-full">{item}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
           );
         })}
