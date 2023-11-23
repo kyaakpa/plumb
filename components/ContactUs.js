@@ -45,11 +45,12 @@ const ContactUs = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="p-4 mt-48 flex flex-col justify-center items-center gap-4 w-full antialiased max-md:mb-32"
+      className="p-4 mt-48 flex flex-col justify-center items-center gap-4 w-full antialiased max-md:mb-32 "
     >
-      <div className="sm:text-7xl text-5xl font-bold tracking-tight text-neutral-800  flex justify-center items-center gap-4">
-        <h2>Contact Us</h2> <EmailIcon className="max-sm:w-[48px]" />
+      <div className="sm:text-7xl text-4xl font-bold tracking-tighter text-neutral-800  flex justify-center items-center gap-4">
+        <h2>CONTACT US</h2> <EmailIcon className="max-sm:w-[48px]" />
       </div>
+      <p className="text-lg text-neutral-500">Feel free to contact us</p>
       <div className="flex flex-col p-6 gap-3  [&>input]:input-form max-sm:[&>input]:p-2 md:w-1/2 max-md:w-[400px]">
         <input
           type="text"
@@ -75,7 +76,7 @@ const ContactUs = () => {
 
         <Button
           color="primary"
-          className="h-16 px-4 rounded-lg font-medium text-2xl mt-6"
+          className="h-16 px-4 rounded-lg font-medium text-2xl active:animate-pulse"
           type="submit"
           isLoading={isLoading}
         >

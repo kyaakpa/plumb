@@ -62,6 +62,10 @@ const Rebates = () => {
           $250 for boiler replacement
         </motion.h2>
       </div>
+      <p className="mt-8 p-8">
+        Yearly Maintenance Membership includes a fall meeting to check your
+        heating system and ensure proper functionality.*
+      </p>
     </>
   );
 };

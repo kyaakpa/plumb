@@ -67,7 +67,7 @@ export default function FormModal({ styling }) {
         backdrop="blur"
         isOpen={isOpen}
         size="3xl"
-        className="max-md:h-[70vh]"
+        className="max-sm:h-[70vh]"
         onOpenChange={onOpenChange}
         motionProps={{
           variants: {
