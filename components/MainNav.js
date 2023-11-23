@@ -31,8 +31,8 @@ export default function MainNav() {
     "Plumbing Services",
     "Heating Services",
     "Gas Services",
+    "Rebates",
     "About Us",
-    "Incentives",
   ];
 
   return (
@@ -133,14 +133,14 @@ export default function MainNav() {
         <NavbarItem>
           <Link
             color="foreground"
-            href="/incentives"
+            href="/rebates"
             className={
-              pathname === "/incentives"
+              pathname === "/rebates"
                 ? `text-blue-600 font-semibold rounded-lg text-lg`
                 : `text-lg`
             }
           >
-            Incentives
+            Rebates
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -158,7 +158,7 @@ export default function MainNav() {
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
               color="foreground"
-              className="w-full text-xl"
+              className="w-full text-xl font-medium"
               href={
                 index === 0
                   ? "/"
@@ -169,9 +169,9 @@ export default function MainNav() {
                   : index === 3
                   ? "/services/gas"
                   : index === 4
-                  ? "/about"
+                  ? "/rebates"
                   : index === menuItems.length - 1
-                  ? "/incentives"
+                  ? "/about"
                   : ""
               }
               size="lg"
