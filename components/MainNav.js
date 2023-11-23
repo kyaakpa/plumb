@@ -120,19 +120,6 @@ export default function MainNav() {
         <NavbarItem>
           <Link
             color="foreground"
-            href="/about"
-            className={
-              pathname === "/about"
-                ? `text-blue-600 font-semibold rounded-lg text-lg`
-                : `text-lg -ml-2`
-            }
-          >
-            About Us
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link
-            color="foreground"
             href="/rebates"
             className={
               pathname === "/rebates"
@@ -141,6 +128,19 @@ export default function MainNav() {
             }
           >
             Rebates
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            color="foreground"
+            href="/about"
+            className={
+              pathname === "/about"
+                ? `text-blue-600 font-semibold rounded-lg text-lg`
+                : `text-lg -ml-2`
+            }
+          >
+            About Us
           </Link>
         </NavbarItem>
       </NavbarContent>
