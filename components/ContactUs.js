@@ -21,7 +21,7 @@ const ContactUs = () => {
     setIsLoading(true);
     e.preventDefault();
     try {
-      const response = await fetch(localURL, {
+      const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

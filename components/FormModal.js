@@ -31,7 +31,7 @@ export default function FormModal({ styling }) {
     console.log(data);
     setIsLoading(true);
     try {
-      const response = await fetch(localURL, {
+      const response = await fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
