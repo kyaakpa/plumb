@@ -4,7 +4,7 @@ import { Resend } from "resend";
 
 export async function POST(req) {
   const form = await req.json();
-  const resend = new Resend(process.env.RESEND_API_KEY);
+  const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
   const name = form.name;
   const desc = form.desc;
   const phone = form.phone;
