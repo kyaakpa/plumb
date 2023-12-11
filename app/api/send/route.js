@@ -1,5 +1,4 @@
-import { EmailTemplate } from "@/components/EmailTemplate";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
 export async function POST(req) {
@@ -23,6 +22,6 @@ export async function POST(req) {
     });
     return NextResponse.json({ message: "ok" });
   } catch (error) {
-    return NextResponse.json({ error });
+    return NextResponse.json({ message: "failed" });
   }
 }

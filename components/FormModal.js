@@ -27,11 +27,10 @@ export default function FormModal({ styling }) {
   const url = "https://markjahern.vercel.app/api/send";
   const localURL = "http://localhost:3000/api/send";
 
-  const onSubmit = async (data, e) => {
-    console.log(data);
+  const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      const response = await fetch(url, {
+      const response = await fetch(localURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -40,7 +39,6 @@ export default function FormModal({ styling }) {
       });
 
       const serverResponse = response.status;
-      console.log(serverResponse);
       if (serverResponse === 200) {
         setIsLoading(false);
         toast.info("We've received your message.", {

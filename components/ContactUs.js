@@ -21,7 +21,7 @@ const ContactUs = () => {
     setIsLoading(true);
     e.preventDefault();
     try {
-      const response = await fetch(url, {
+      const response = await fetch(localURL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,7 +30,6 @@ const ContactUs = () => {
       });
 
       const serverResponse = response.status;
-      console.log(serverResponse);
       if (serverResponse === 200) {
         setIsLoading(false);
         toast.info("We've received your message.", {
