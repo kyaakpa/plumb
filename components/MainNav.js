@@ -137,7 +137,7 @@ export default function MainNav() {
             className={
               pathname === "/about"
                 ? `text-blue-600 font-semibold rounded-lg text-lg`
-                : `text-lg -ml-2`
+                : `text-lg`
             }
           >
             About Us
