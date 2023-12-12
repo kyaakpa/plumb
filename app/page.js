@@ -29,11 +29,11 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="flex justify-center flex-col items-center sm:-mt-72 2xl:-mt-48 max-sm:-mt-96  antialiased">
-          <div className="flex flex-col items-center shadow-2xl opacity-95 bg-gradient-to-l from-yellow-50 to-blue-100 md:w-2/3 max-md:mx-6 p-3">
-            <h1 className=" flex text-3xl text-center md:text-5xl font-black pb-3 p-4 sm:p-8 place-self-center tracking-tight  md:text-center bg-gradient-to-r bg-clip-text text-transparent from-blue-600 to-blue-900">
+        <div className="flex justify-center flex-col items-center sm:-mt-72 2xl:-mt-48 max-sm:-mt-96">
+          <div className="flex flex-col items-center shadow-2xl opacity-95 bg-gradient-to-l from-yellow-50 to-blue-100 md:w-2/3 p-3">
+            <h1 className=" flex text-3xl text-center md:text-5xl font-black pb-3 p-4 sm:p-8 place-self-center tracking-tight  md:text-center bg-gradient-to-r bg-clip-text text-transparent from-blue-600 to-blue-900 whitespace-nowrap">
               70
-              <span className="-mt-3">+</span> &nbsp;Years Plumbing
+              <span className="-mt-2">+</span> &nbsp;Years Plumbing
             </h1>
             <p className="leading-loose text-center text-lg md:px-12 pb-8 p-2 italic text-black tracking-tight">
               Here at Mark J. Ahern Inc., we have been proudly serving The
