@@ -1,4 +1,5 @@
 import Image from "next/image";
+import FamilyPicture from "@/public/markfamily.webp";
 
 export const metadata = {
   title: "About us",
@@ -8,38 +9,41 @@ export const metadata = {
 const About = () => {
   return (
     <>
-      <div className="relative w-full">
-        {/* Use a div with position relative to control the image positioning */}
-        <div className="relative bg-gradient-to-r from-blue-800 to-transparent h-[50vh]">
+      <div className="relative w-full lg:h-[55vh] max-lg:h-[48vh]">
+        <div className="bg-gradient-to-r from-blue-800 to-transparent lg:h-[55vh] max-lg:h-[48vh]">
           <Image
             src={"/about.avif"}
-            layout="fill" // This will make the image cover the container
-            objectFit="cover" // This will make sure the image covers the container without distorting
+            fill
             alt="plumbing tools"
-            className="opacity-20"
+            className="opacity-20 object-cover -z-10"
           />
-          <h1 className="relative top-[100px]  text-white sm:p-24 text-5xl font-bold">
-            About Us
-          </h1>
+          <div className="lg:w-2/3 max-lg:px-12 lg:h-[55vh] max-lg:h-[48vh] text-5xl font-bold flex max-lg:flex-col justify-between items-center mx-auto">
+            <h1 className="md:text-blue-50 max-lg:pt-20 opacity-100 tracking-tight">
+              About Us
+            </h1>
+            <div className="self-end">
+              <Image
+                src={FamilyPicture}
+                width={2738}
+                height={3651}
+                alt="plumbing tools"
+                className="w-[500px] opacity-100 min-w-[300px]"
+              />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="sm:p-24">
-        Mark J. Ahern, Inc. has established a significant presence in the entire
-        Boston area, offering a comprehensive range of services that cater to
-        the diverse needs of the residential, commercial, and industrial
-        sectors. The company&aposs operations encompass a wide spectrum of
-        services, ranging from service repairs to full installations, and this
-        versatility has contributed to its success and reputation in the region.
-      </div>
-
-      <div className="flex flex-col items-center justify-center gap-8 p-12">
-        <div className="rounded-full bg-gradient-to-bl from-neutral-600 to-black p-80 w-fit"></div>
-        <div>***picture goes up in the black gradient circle ^ ***</div>
-        <p className="italic">
-          Fugiat anim quis eiusmod aliqua fugiat anim minim tempor. Amet nisi
-          commodo ut nisi duis aliqua aute et ex id. Aute dolor Lorem dolor
-          aliquip dolor anim culpa ad sint aute reprehenderit magna consequat.
-        </p>
+      <div className="flex flex-col justify-center items-center mt-14 gap-12 text-center">
+        <div className="sm:w-2/3 max-sm:p-4 italic">
+          Mark J. Ahern, Inc. has established a significant presence in the
+          entire Boston area, offering a comprehensive range of services that
+          cater to the diverse needs of the residential, commercial, and
+          industrial sectors. The company's operations encompass a wide spectrum
+          of services, ranging from service repairs to full installations, and
+          this versatility has contributed to its success and reputation in the
+          region.
+        </div>
+        <div>More pictures and text to follow</div>
       </div>
     </>
   );

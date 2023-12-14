@@ -6,7 +6,7 @@ export const metadata = {
 const Heating = () => {
   return (
     <div className="flex justify-center mb-20">
-      <ul className="[&>li]:pl-3 [&>h4]:text-xl [&>h4]:mt-6 [&>h4]:pb-2 [&>h4]:font-semibold  list-disc w-2/3">
+      <ul className="[&>li]:pl-3 [&>h4]:text-xl [&>h4]:mt-6 [&>h4]:pb-2 [&>h4]:font-semibold text-justify list-disc w-2/3">
         <h4 className="">Efficient Condensing Boilers:</h4>
         <li>
           Condensing boilers are highly efficient, modern heating systems that

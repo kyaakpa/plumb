@@ -36,7 +36,7 @@ export default function MainNav() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full">
       <NavbarContent>
         <NavbarBrand>
           <Link href="/" className="hover:cursor-default">
@@ -47,7 +47,7 @@ export default function MainNav() {
           </Link>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden lg:flex gap-4" justify="center">
+      <NavbarContent className="hidden lg:flex gap-8" justify="center">
         <NavbarItem>
           <Link
             color="foreground"
