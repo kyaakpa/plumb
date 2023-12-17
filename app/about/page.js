@@ -9,25 +9,25 @@ export const metadata = {
 const About = () => {
   return (
     <>
-      <div className="relative w-full lg:h-[55vh] max-lg:h-[48vh]">
-        <div className="bg-gradient-to-r from-blue-800 to-transparent lg:h-[55vh] max-lg:h-[48vh]">
+      <div className="relative w-full lg:h-[48vh] max-lg:h-[48vh]">
+        <div className="bg-gradient-to-r from-blue-800 to-transparent lg:h-[48vh] max-lg:h-[48vh]">
           <Image
             src={"/about.avif"}
             fill
             alt="plumbing tools"
             className="opacity-20 object-cover -z-10"
           />
-          <div className="lg:w-2/3 max-lg:px-12 lg:h-[55vh] max-lg:h-[48vh] text-5xl font-bold flex max-lg:flex-col justify-between items-center mx-auto">
+          <div className="lg:w-2/3 lg:h-[48vh] max-lg:h-[48vh] text-5xl font-bold flex max-lg:flex-col justify-between items-center mx-auto">
             <h1 className="md:text-blue-50 max-lg:pt-20 opacity-100 tracking-tight">
               About Us
             </h1>
-            <div className="self-end">
+            <div className="self-end max-lg:self-center overflow-hidden">
               <Image
                 src={FamilyPicture}
                 width={2738}
                 height={3651}
                 alt="plumbing tools"
-                className="w-[500px] opacity-100 min-w-[300px]"
+                className="w-[600px] opacity-100 min-w-[500px]"
               />
             </div>
           </div>
