@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-.import { Button, Input, Textarea } from "@nextui-org/react";
+import { Button, Input, Textarea } from "@nextui-org/react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
