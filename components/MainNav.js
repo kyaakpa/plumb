@@ -5,48 +5,52 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  Link,
   Button,
   DropdownItem,
   DropdownTrigger,
   Dropdown,
   DropdownMenu,
-  Link,
-  NavbarMenuToggle,
-  NavbarMenuItem,
-  NavbarMenu,
 } from "@nextui-org/react";
+
 import Image from "next/image";
-import { ChevronDown } from "@/components/Icons";
+import { ChevronDown, PhoneIcon } from "@/components/Icons";
 import logo from "@/public/logo-black.webp";
-import FormModal from "@/components/FormModal";
 import { useRouter, usePathname } from "next/navigation";
 
 export default function MainNav() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname().toString();
+  console.log(pathname);
   const router = useRouter();
-
   const menuItems = [
-    "Home",
-    "Plumbing Services",
-    "Heating Services",
-    "Gas Services",
-    "Rebates",
-    "About Us",
+    { label: "HOME", path: "/" },
+    {
+      label: "SERVICES",
+      children: [
+        { label: "Plumbing Services", path: "/services/plumbing" },
+        { label: "Gas Services", path: "/services/gas" },
+        { label: "Heating Services", path: "/services/heating" },
+      ],
+    },
+    { label: "REBATES", path: "/rebates" },
+    { label: "ABOUT US", path: "/about" },
+    { label: "CONTACT", path: "/contact" },
   ];
 
+  const handleItemClick = (event, path) => {
+    router.push(path);
+  };
+
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} maxWidth="full">
-      <NavbarContent>
-        <NavbarBrand>
-          <Link href="/" className="hover:cursor-default">
-            <Image src={logo} width={75} className="-ml-5" alt="logo" />
-            <span className="font-bold text-black text-xl">
-              Mark J Ahern Inc.
-            </span>
-          </Link>
-        </NavbarBrand>
-      </NavbarContent>
+    <Navbar maxWidth="full" className="px-4 shadow-sm">
+      <NavbarBrand>
+        <Link href="/" className="hover:cursor-default">
+          <Image src={logo} width={75} className="-ml-5" alt="logo" />
+          <span className="font-bold text-black text-xl">
+            Mark J Ahern Inc.
+          </span>
+        </Link>
+      </NavbarBrand>
       <NavbarContent className="hidden lg:flex gap-8" justify="center">
         <NavbarItem>
           <Link
@@ -143,44 +147,31 @@ export default function MainNav() {
             About Us
           </Link>
         </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="lg:hidden"
-        />
-        <NavbarItem className="block max-lg:hidden">
-          <FormModal color="primary" variant="flat" />
+        <NavbarItem>
+          <Link
+            color="foreground"
+            href="/contact"
+            className={
+              pathname === "/contact"
+                ? `text-blue-600 font-semibold rounded-lg text-lg`
+                : `text-lg`
+            }
+          >
+            Contact
+          </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu className="z-40 items-center gap-6 pt-24">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              color="foreground"
-              className="w-full text-xl font-medium"
-              href={
-                index === 0
-                  ? "/"
-                  : index === 1
-                  ? "/services/plumbing"
-                  : index === 2
-                  ? "/services/heating"
-                  : index === 3
-                  ? "/services/gas"
-                  : index === 4
-                  ? "/rebates"
-                  : index === menuItems.length - 1
-                  ? "/about"
-                  : ""
-              }
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+
+      <NavbarContent justify="end">
+        <NavbarItem className="flex flex-col">
+          <span className="text-sm font-semibold text-black">
+            Need help? Call us at!
+          </span>
+          <Link href="tel:6174843313" className="text-sm text-blue-600 ml-1">
+            <PhoneIcon /> 617-484-3313
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
     </Navbar>
   );
 }

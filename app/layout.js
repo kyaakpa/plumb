@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import MainNav from "@/components/MainNav";
 import Footer from "@/components/Footer";
 import FormModal from "@/components/FormModal";
+import Home from "./page";
 
 const inter = Inter({ subsets: ["latin"] });
 
