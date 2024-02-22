@@ -4,8 +4,9 @@ import { Button, Input, Textarea } from "@nextui-org/react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import Image from "next/image";
 
-const page = () => {
+const Page = () => {
   const {
     register,
     handleSubmit,
@@ -51,51 +52,61 @@ const page = () => {
     >
       <div className="relative w-full h-full overflow-hidden">
         <div className="h-[100vh]">
-          <img src={`/front.webp`} alt="plumbing site" />
+          <Image src={`/front.webp`} alt="plumbing site" layout="fill" />
         </div>
         <div
           className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40 z-20
 "
         >
-          <div className="flex flex-row w-full px-32">
-            <div className="flex flex-col w-1/2 p-4 items-start justify-start">
-              <h1 className="text-6xl font-semibold  text-white ">
+          <div className="flex flex-row w-full px-6 lg:px-32 items-start justify-between gap-4">
+            <div className="flex flex-col w-full lg:w-1/2 p-4 items-start justify-start">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold  text-white ">
                 Contact Us
               </h1>
-              <p className="text-gray-100 mt-4">
+              <p className="md:text-lg text-gray-100 mt-4">
                 Mark J. Ahern, Inc. has been providing plumbing, heating, and
                 gas services to the Greater Boston area for over 30 years. We
                 are committed to providing the highest level of customer service
                 and satisfaction. Please feel free to contact us with any of
                 your plumbing, heating, or gas needs. We are here to help you.
               </p>
-              <div className="flex flex-row w-full mt-4">
+              <div className="flex flex-row w-full mt-4 gap-4">
                 <div className="flex flex-col w-full mt-4">
-                  <h1 className="text-3xl font-semibold mb-2 text-white">
+                  <h1 className="text-lg lg:text-3xl font-semibold mb-2 text-white">
                     ADDRESS
                   </h1>
-                  <p className="text-gray-100  ">Mark J. Ahern, Inc. </p>
-                  <p className="text-gray-100  ">Lynnfield, MA 01940</p>
-                  <p className="text-gray-100  ">4 Cortland Lane</p>
+                  <p className="text-xs lg:text-lg text-gray-100  ">
+                    Mark J. Ahern, Inc.{" "}
+                  </p>
+                  <p className="text-xs md:text-lg text-gray-100  ">
+                    Lynnfield, MA 01940
+                  </p>
+                  <p className="text-xs md:text-lg text-gray-100  ">
+                    4 Cortland Lane
+                  </p>
                 </div>
                 <div className="flex flex-col w-full mt-4">
-                  <h1 className="text-3xl font-semibold mb-2 text-white">
+                  <h1 className="text-lg lg:text-3xl font-semibold mb-2 text-white">
                     CONTACT
                   </h1>
-                  <p className="text-gray-100  ">Phone: (617) 492-5198</p>
-                  <p className="text-gray-100  ">Fax: (617) 864-0295</p>
+                  <p className="text-xs md:text-lg text-gray-100  ">
+                    Phone: (617) 492-5198
+                  </p>
+                  <p className="text-xs md:text-lg text-gray-100  ">
+                    Fax: (617) 864-0295
+                  </p>
                   <Link
                     href="mailto:Mark@Markjaherninc.com"
                     className="hover:cursor-pointer"
                   >
-                    <p className="inline-block border-b border-blue-400 text-blue-400">
+                    <p className="inline-block border-b border-blue-400 text-blue-400 text-xs md:text-lg">
                       Mark@Markjaherninc.com
                     </p>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="bg-white  p-8 rounded-xl">
+            <div className="bg-white  p-8 rounded-xl hidden lg:flex flex-col">
               <h1 className="text-5xl font-semibold">Get in touch</h1>
               <p className="font-semibold text-sm text-gray-800 my-2">
                 Feel free to contact us
@@ -163,4 +174,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
