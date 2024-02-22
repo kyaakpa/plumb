@@ -24,7 +24,6 @@ export default function FormModal({ styling }) {
   } = useForm();
 
   const [isLoading, setIsLoading] = useState(false);
-  const url = "https://markjahern.vercel.app/api/send";
   const localURL = "http://localhost:3000/api/send";
 
   const onSubmit = async (data) => {
@@ -41,7 +40,12 @@ export default function FormModal({ styling }) {
       const serverResponse = response.status;
       if (serverResponse === 200) {
         setIsLoading(false);
-        toast.info("We've received your message.", {
+        toast.success("We've received your message.", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      } else {
+        setIsLoading(false);
+        toast.error("There was an error sending your message.", {
           position: toast.POSITION.TOP_RIGHT,
         });
       }
@@ -92,53 +96,54 @@ export default function FormModal({ styling }) {
           {(onClose) => (
             <>
               <div className="flex">
-                <ModalHeader className="flex flex-col gap-1 w-1/2 max-lg:hidden">
-                  Mailing Address
-                </ModalHeader>
-                <ModalHeader className="pr-8 w-1/2">
-                  Any Questions ?
+                <ModalHeader className="pr-8 ">
+                  {" "}
+                  Feel free to contact us
                 </ModalHeader>
               </div>
               <div className="flex w-full">
-                <ModalBody className="border-r-1 w-1/2 max-lg:hidden">
-                  <p className="flex flex-col">
-                    <span>Mark J. Ahern, Inc.</span>
-                    <span>4 Cortland Lane</span>
-                    <span>Lynnfield, MA 01940</span>
-                  </p>
-                  <p className="flex flex-col">
-                    <span>(617) 492-5198</span>
-                    <span>markjaherninc@gmail.com</span>
-                  </p>
-                </ModalBody>
                 <ModalBody onSubmit={handleSubmit(onSubmit)}>
-                  <Input
-                    size="md"
-                    type="text"
-                    label="Name"
-                    placeholder="Enter your name"
-                    {...register("name", { required: true })}
-                  />
+                  <div className="flex flex-row gap-4">
+                    <Input
+                      type="text"
+                      label="First name"
+                      isRequired
+                      {...register("firstName", {
+                        required: "First name is required",
+                      })}
+                    />
+                    {errors.firstName && (
+                      <p className="text-red-500">{errors.firstName.message}</p>
+                    )}
+                    <Input
+                      type="text"
+                      label="Last name"
+                      isRequired
+                      {...register("lastName", {
+                        required: "Last name is required",
+                      })}
+                    />
+                    {errors.lastName && (
+                      <p className="text-red-500">{errors.lastName.message}</p>
+                    )}
+                  </div>
                   <Input
                     type="email"
                     label="Email"
-                    placeholder="Enter your email"
-                    {...register("email", {
-                      required: true,
-                      pattern: /^\S+@\S+$/i,
-                    })}
+                    isRequired
+                    {...register("email", { required: "Email is required" })}
                   />
-                  <Input
-                    size="md"
-                    type="text"
-                    label="Phone"
-                    placeholder="Enter your phone"
-                    {...register("phone", { required: true, maxLength: 15 })}
-                  />
+                  {errors.email && (
+                    <p className="text-red-500">{errors.email.message}</p>
+                  )}
+                  <Input type="tel" label="Phone" {...register("phone")} />
                   <Textarea
-                    label="Description"
-                    placeholder="How can we help you?"
-                    {...register("desc", { maxLength: 500 })}
+                    type="text"
+                    label="How can we help you?"
+                    isRequired
+                    {...register("description", {
+                      required: "Description is required",
+                    })}
                   />
                 </ModalBody>
               </div>
