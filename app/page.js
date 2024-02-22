@@ -22,7 +22,7 @@ const Home = () => {
 "
           >
             <div className="flex flex-row gap-8 ">
-              <div className="max-w-3xl mx-auto text-start text-white flex flex-col gap-8  items-start ">
+              <div className="max-w-3xl mx-auto text-start text-gray-100 flex flex-col gap-8  items-start ">
                 <h1 className="text-start text-6xl font-bold mb-4 justify-start">
                   Trusted Plumbing Experts Since 1986
                 </h1>

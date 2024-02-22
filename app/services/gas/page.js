@@ -14,7 +14,7 @@ const Gas = () => {
           className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40 z-20
 "
         >
-          <h1 className="my-12 text-5xl font-semibold flex p-2 text-gray-300 ">
+          <h1 className="my-12 text-5xl font-semibold flex p-2 text-gray-100 ">
             <Image
               className="mr-4 max-md:hidden"
               src={spanner}
