@@ -13,7 +13,7 @@ const Plumbing = () => {
     <div className="flex flex-col justify-center items-center">
       <div className="relative w-full h-full overflow-hidden">
         <div className="h-[100vh]">
-          <img src={`/front.webp`} objectFit="cover" alt="plumbing site" />
+          <img src={`/front.webp`} alt="plumbing site" />
         </div>
         <div
           className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40 z-20

@@ -1,3 +1,6 @@
+import { facebook } from "@/public/facebook.webp";
+import Image from "next/image";
+import Link from "next/link";
 const Footer = () => {
   return (
     <div>
@@ -27,7 +30,14 @@ const Footer = () => {
             </h1>
             <p>Phone: (617) 492-5198</p>
             <p>Fax: (617) 864-0295</p>
-            <p>Email: Mark@Markjaherninc.com </p>
+            <Link
+              href="mailto:Mark@Markjaherninc.com"
+              className="hover:cursor-pointer"
+            >
+              <p className="inline-block border-b border-blue-400 text-blue-400">
+                Mark@Markjaherninc.com
+              </p>
+            </Link>
           </div>
         </div>
       </div>

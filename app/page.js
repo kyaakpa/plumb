@@ -15,7 +15,7 @@ const Home = () => {
       <div className="flex flex-col gap-6 " id="/">
         <div className="relative w-full h-full overflow-hidden">
           <div className="h-[100vh]">
-            <img src={`/front.webp`} objectFit="cover" alt="plumbing site" />
+            <img src={`/front.webp`} alt="plumbing site" />
           </div>
           <div
             className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40
@@ -171,7 +171,6 @@ const Home = () => {
                     src={`/heating.jpg`}
                     width={400}
                     height={400}
-                    objectFit="cover"
                     alt="heating"
                   />
                   <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold bg-black bg-opacity-50">

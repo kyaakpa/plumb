@@ -32,7 +32,13 @@ const ContactUs = () => {
       const serverResponse = response.status;
       if (serverResponse === 200) {
         setIsLoading(false);
-        toast.info("We've received your message.", {
+        toast.success("We've received your message.", {
+          position: toast.POSITION.TOP_RIGHT,
+        });
+      }
+
+      if (serverResponse === 500) {
+        toast.error("There was an error sending your message.", {
           position: toast.POSITION.TOP_RIGHT,
         });
       }
@@ -82,7 +88,6 @@ const ContactUs = () => {
           Submit
         </Button>
       </div>
-      <ToastContainer />
     </form>
   );
 };
