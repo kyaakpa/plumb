@@ -1,7 +1,4 @@
 import Image from "next/image";
-import logo from "@/public/logo-black.webp";
-import ContactUsDup from "@/components/contact";
-import ContactUs from "@/components/ContactUs";
 import { Divider } from "@nextui-org/react";
 
 export const metadata = {
@@ -12,17 +9,21 @@ export const metadata = {
 const Home = () => {
   return (
     <>
-      <div className="flex flex-col gap-6 " id="/">
+      <div className="flex flex-col gap-6 ">
         <div className="relative w-full h-full overflow-hidden">
           <div className="h-[100vh]">
-            <img src={`/front.webp`} alt="plumbing site" />
+            <img
+              src={`/front.webp`}
+              className="object-cover"
+              alt="plumbing site"
+            />
           </div>
           <div
             className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40
 "
           >
-            <div className="flex flex-row gap-8 ">
-              <div className="max-w-3xl mx-auto text-start text-gray-100 flex flex-col gap-8  items-start ">
+            <div className="flex flex-row gap-8 p-4">
+              <div className="max-w-3xl mx-auto text-start text-white flex flex-col gap-8  items-start ">
                 <h1 className="text-start text-6xl font-bold mb-4 justify-start">
                   Trusted Plumbing Experts Since 1986
                 </h1>

@@ -5,6 +5,9 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
   Link,
   Button,
   DropdownItem,
@@ -12,37 +15,36 @@ import {
   Dropdown,
   DropdownMenu,
 } from "@nextui-org/react";
+import "@/styles/hamburgers.css";
 
+import { useState } from "react";
 import Image from "next/image";
 import { ChevronDown, PhoneIcon } from "@/components/Icons";
 import logo from "@/public/logo-black.webp";
 import { useRouter, usePathname } from "next/navigation";
+import { HamburgerItems } from "./HamburgerItems";
 
 export default function MainNav() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname().toString();
   console.log(pathname);
   const router = useRouter();
-  const menuItems = [
-    { label: "HOME", path: "/" },
-    {
-      label: "SERVICES",
-      children: [
-        { label: "Plumbing Services", path: "/services/plumbing" },
-        { label: "Gas Services", path: "/services/gas" },
-        { label: "Heating Services", path: "/services/heating" },
-      ],
-    },
-    { label: "REBATES", path: "/rebates" },
-    { label: "ABOUT US", path: "/about" },
-    { label: "CONTACT", path: "/contact" },
-  ];
 
-  const handleItemClick = (event, path) => {
-    router.push(path);
-  };
+  const [isActive, setIsActive] = useState(false);
+  function handleClick() {
+    if (!isActive) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
+  }
 
   return (
-    <Navbar maxWidth="full" className="px-4 shadow-sm">
+    <Navbar
+      maxWidth="full"
+      className="px-4 shadow-sm"
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarBrand>
         <Link href="/" className="hover:cursor-default">
           <Image src={logo} width={75} className="-ml-5" alt="logo" />
@@ -51,6 +53,14 @@ export default function MainNav() {
           </span>
         </Link>
       </NavbarBrand>
+      <NavbarContent
+        justify="end"
+        className="lg:hidden"
+        onClick={() => handleClick()}
+      >
+        <HamburgerItems isActive={isActive} />
+      </NavbarContent>
+
       <NavbarContent className="hidden lg:flex gap-8" justify="center">
         <NavbarItem>
           <Link
@@ -162,7 +172,7 @@ export default function MainNav() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end">
+      <NavbarContent justify="end" className=" max-lg:hidden">
         <NavbarItem className="flex flex-col">
           <span className="text-sm font-semibold text-black">
             Need help? Call us at!
