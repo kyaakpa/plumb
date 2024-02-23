@@ -9,15 +9,15 @@ export const metadata = {
 const About = () => {
   return (
     <>
-      <div className="relative w-full lg:h-[48vh] max-lg:h-[48vh]">
-        <div className="bg-gradient-to-r from-blue-800 to-transparent lg:h-[48vh] max-lg:h-[48vh]">
+      <div className="relative w-full lg:h-[50vh] max-lg:h-[50vh]">
+        <div className="bg-gradient-to-r from-blue-800 to-transparent lg:h-[50vh] max-lg:h-[50vh]">
           <Image
             src={"/about.avif"}
             fill
             alt="plumbing tools"
             className="opacity-20 object-cover -z-10"
           />
-          <div className="lg:w-2/3 lg:h-[48vh] max-lg:h-[48vh] text-5xl font-bold flex max-lg:flex-col justify-between items-center mx-auto">
+          <div className="lg:w-2/3 lg:h-[50vh] max-lg:h-[50vh] text-5xl font-bold flex max-lg:flex-col justify-between items-center mx-auto">
             <h1 className="md:text-blue-50 max-lg:pt-20 opacity-100 tracking-tight">
               About Us
             </h1>
