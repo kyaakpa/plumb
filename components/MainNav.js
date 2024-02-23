@@ -177,8 +177,11 @@ export default function MainNav() {
           <span className="text-sm font-semibold text-black">
             Need help? Call us at!
           </span>
-          <Link href="tel:6174843313" className="text-sm text-blue-600 ml-1">
-            <PhoneIcon /> 617-484-3313
+          <Link
+            href="tel:(617) 492-5198"
+            className="text-sm text-blue-600 ml-1"
+          >
+            <PhoneIcon /> (617) 492-5198
           </Link>
         </NavbarItem>
       </NavbarContent>

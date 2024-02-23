@@ -172,7 +172,6 @@ const Home = () => {
                     src={`/heating.jpg`}
                     width={400}
                     height={400}
-                    objectFit="cover"
                     alt="heating"
                   />
                   <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-bold bg-black bg-opacity-50">

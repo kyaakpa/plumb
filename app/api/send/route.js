@@ -1,24 +1,30 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { Email } from "./email";
 
 export async function POST(req) {
   const form = await req.json();
   const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
-  const name = form.name;
-  const desc = form.desc;
+  const firstName = form.firstName;
+  const lastName = form.lastName;
+  const description = form.description;
   const phone = form.phone;
   const email = form.email;
   try {
-    const data = await resend.emails.send({
-      from: `${name} <onboarding@resend.dev>`,
-      to: ["soheatshrestha@gmail.com"],
+    await resend.emails.send({
+      from: `${firstName + " " + lastName} <onboarding@resend.dev>`,
+      to: ["kyaakpalama@webtion.org"],
       subject: "We have received your message",
-      html: `
-      <p>Name: ${name}</p>
-      <p>Phone: ${phone}</p>
-      <p>Email: ${email}</p>
-      <p>Description: ${desc}</p>
-      `,
+      react: (
+        <Email
+          firstName={firstName}
+          lastName={lastName}
+          description={description}
+          phone={phone}
+          email={email}
+          updatedDate={new Date()}
+        />
+      ),
     });
     return NextResponse.json({ message: "ok" });
   } catch (error) {
