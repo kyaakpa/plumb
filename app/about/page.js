@@ -33,17 +33,16 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center mt-14 gap-12 text-center">
+      <div className="flex flex-col justify-center items-center mt-14 gap-12 text-center pb-12">
         <div className="sm:w-2/3 max-sm:p-4 italic">
-          Mark J. Ahern, Inc. has established a significant presence in the
-          entire Boston area, offering a comprehensive range of services that
-          cater to the diverse needs of the residential, commercial, and
-          industrial sectors. The company's operations encompass a wide spectrum
-          of services, ranging from service repairs to full installations, and
-          this versatility has contributed to its success and reputation in the
-          region.
+          We are a privately owned and operated company founded in 1986 by Mark
+          J. Ahern. Mark began the company when he was 27 years old. With a
+          strong history of success, Mark J. Ahern, Inc. continues to grow its
+          client base while working with both great people and organizations.
+          Mark plans to continue this tradition of success through providing
+          quality work at reasonable costs all while maintaining a focus on
+          customer satisfaction.
         </div>
-        <div>More pictures and text to follow</div>
       </div>
     </>
   );
