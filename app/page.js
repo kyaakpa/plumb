@@ -22,12 +22,12 @@ const Home = () => {
             className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40
 "
           >
-            <div className="flex flex-row gap-8 p-4">
-              <div className="max-w-3xl mx-auto text-start text-white flex flex-col gap-8  items-start ">
-                <h1 className="text-start text-6xl font-bold mb-4 justify-start">
+            <div className="flex flex-row gap-4 md:gap-8 p-4 items-center">
+              <div className="max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto text-start text-white flex flex-col gap-2 md:gap-8  items-start ">
+                <h1 className="text-start text-xl md:text-4xl lg:text-6xl font-bold mb-4 justify-start">
                   Trusted Plumbing Experts Since 1986
                 </h1>
-                <p className="text-sm text-justify md:text-base leading-loose md:leading-relaxed pb-8 ">
+                <p className="text-sm text-justify md:text-base leading-loose md:leading-relaxed pb-2 md:pb-8 ">
                   Here at Mark J. Ahern Inc., we have been proudly serving
                   Boston and the surrounding areas since 1986. We are a small,
                   full-service company, which allows a close personal
@@ -40,7 +40,7 @@ const Home = () => {
                   sole priority is to tend to your individual needs. At Mark J.
                   Ahern Inc., your satisfaction is our number one priority!
                 </p>
-                <ul className="grid grid-cols-3 gap-4 ">
+                <ul className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 ">
                   <li className="flex items-center">
                     <svg
                       className="w-4 h-4 text-green-500 mr-2"
@@ -53,7 +53,7 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    EPA RRP Certified
+                    <p className="text-sm md:text-base ">EPA RRP Certified</p>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -67,7 +67,7 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Licensed
+                    <p className="text-sm md:text-base ">Licensed</p>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -81,7 +81,7 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Fully Insured
+                    <p className="text-sm md:text-base ">Fully Insured</p>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -95,7 +95,7 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Free Estimates
+                    <p className="text-sm md:text-base ">Free Estimates</p>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -109,7 +109,7 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Family Operated
+                    <p className="text-sm md:text-base ">Family Operated</p>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -123,11 +123,13 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    MA Master Lic #10318
+                    <p className="text-sm md:text-base ">
+                      MA Master Lic #10318
+                    </p>
                   </li>
                 </ul>
               </div>
-              <div>
+              <div className="hidden lg:flex">
                 <img
                   src={"/cambridge.webp"}
                   alt="cambridge"
@@ -138,21 +140,21 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row items-center justify-center py-6 w-full">
+        <div className="flex flex-row items-center justify-center  py-2 md:py-6 w-full">
           <div
-            className="flex flex-col items-center justify-center gap-4 px-6"
+            className="flex flex-col items-center justify-center gap-2 md:gap-4 px-2 md:px-6"
             id="services-section"
           >
-            <h1 className="text-center text-4xl font-bold mb-2">
+            <h1 className="text-center text-xl md:text-4xl font-bold mb-1 md:mb-2">
               Our Services
             </h1>
-            <p className="text-justify mb-6">
+            <p className="text-sm md:text-base text-justify mb-2 md:mb-6">
               We operate in the entire Boston area and perform a variety of
               residential, commercial, and industrial services ranging from
               service repairs to full installations. Our services include, but
               are not limited to the following:
             </p>
-            <div className="grid grid-cols-3 gap-6 relative">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 relative">
               <div className="relative cursor-pointer transition-transform transform hover:scale-105">
                 <a href="/services/plumbing">
                   <Image
@@ -191,12 +193,12 @@ const Home = () => {
           </div>
         </div>
         <div className="bg-[#FAFAFA]">
-          <div className="flex flex-col items-center justify-center py-6 ">
-            <h1 className="text-center text-3xl font-bold mb-4">
+          <div className="flex flex-col items-center justify-center py-2 md:py-6 ">
+            <h1 className="text-center text-base md:text-3xl font-bold mb-2 md:mb-4">
               Preferred Plumbing Fixture Manufacturers
             </h1>
-            <div className="grid grid-cols-7 gap-12 ">
-              <div className="w-40 h-40 flex items-center justify-center">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8 lg:gap-12 ">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image
                   src={`/american_standard.png`}
                   width={200}
@@ -204,7 +206,7 @@ const Home = () => {
                   alt="American Standard"
                 />
               </div>
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image
                   src={`/chicago.png`}
                   width={200}
@@ -212,7 +214,7 @@ const Home = () => {
                   alt="Chicago Faucets"
                 />
               </div>
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image
                   src={`/delta.png`}
                   width={200}
@@ -220,7 +222,7 @@ const Home = () => {
                   alt="Delta"
                 />
               </div>
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image
                   src={`/grohe.png`}
                   width={200}
@@ -228,7 +230,7 @@ const Home = () => {
                   alt="Grohe"
                 />
               </div>
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image
                   src={`/kohler.png`}
                   width={200}
@@ -236,7 +238,7 @@ const Home = () => {
                   alt="Kohler"
                 />
               </div>
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image
                   src={`/symmons.avif`}
                   width={200}
@@ -244,7 +246,7 @@ const Home = () => {
                   alt="Symmons"
                 />
               </div>
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image
                   src={`/elkay.jpg`}
                   width={200}
@@ -256,14 +258,14 @@ const Home = () => {
           </div>
           <Divider />
           <div className="flex flex-col items-center justify-center mt-6">
-            <h1 className="text-center text-3xl font-bold mb-4">
+            <h1 className="text-center text-base md:text-3xl  font-bold mb-4">
               Preferred Heating Product Manufacturers
             </h1>
-            <div className="grid grid-cols-6 gap-12">
-              <div className="w-40 h-40 flex items-center justify-center">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8 lg:gap-12 ">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image src={`/htp.jpg`} width={200} height={200} alt="HTP" />
               </div>
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image
                   src={`/grundfos.svg`}
                   width={200}
@@ -271,7 +273,7 @@ const Home = () => {
                   alt="grundfos"
                 />
               </div>
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image
                   src={`/bosch.png`}
                   width={200}
@@ -279,10 +281,10 @@ const Home = () => {
                   alt="bosch"
                 />
               </div>
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image src={`/taco.png`} width={200} height={200} alt="taco" />
               </div>
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image
                   src={`/slantfin.png`}
                   width={200}
@@ -291,7 +293,7 @@ const Home = () => {
                 />
               </div>
 
-              <div className="w-40 h-40 flex items-center justify-center">
+              <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image
                   src={`/wellmc.png`}
                   width={200}

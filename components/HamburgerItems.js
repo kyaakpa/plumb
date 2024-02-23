@@ -91,6 +91,7 @@ export const HamburgerItems = () => {
                   key={index}
                   href={item.link}
                   className="text-right p-3  px-4 rounded-lg text-lg hover:bg-blue-500 transition-colors duration-200 ease-in hover:text-white  font-medium"
+                  onClick={toggleMenu}
                 >
                   <motion.p
                     variants={{

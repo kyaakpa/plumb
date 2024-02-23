@@ -42,7 +42,7 @@ export default function MainNav() {
   return (
     <Navbar
       maxWidth="full"
-      className="px-4 shadow-sm"
+      className="md:px-4 shadow-sm"
       onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarBrand>
