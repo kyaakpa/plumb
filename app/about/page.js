@@ -27,7 +27,7 @@ const About = () => {
                 width={2738}
                 height={3651}
                 alt="plumbing tools"
-                className="w-[600px] opacity-100 min-w-[500px]"
+                className="w-[600px] opacity-100 sm:w-[300px] md:min-w-[500px]"
               />
             </div>
           </div>
