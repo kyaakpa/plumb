@@ -1,6 +1,7 @@
 import { facebook } from "@/public/facebook.webp";
 import Image from "next/image";
 import Link from "next/link";
+import FormModal from "./FormModal";
 const Footer = () => {
   return (
     <div>
@@ -10,9 +11,7 @@ const Footer = () => {
             Have a plumbing emergency?
             <span> Call us now!</span>
           </h1>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-            Contact Us
-          </button>
+          <FormModal />
         </div>
 
         <div className="flex flex-col md:flex-row items-start gap-2 md:gap-24 ">
