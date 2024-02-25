@@ -36,6 +36,18 @@ export const PlumbServices = [
     ],
   },
   {
+    color: "bg-purple-200",
+    headingColor: "text-purple-950",
+    title: "Tankless water heaters",
+    picture: "/indirectFired.webp",
+    altText: "Indirect Water heater",
+    content: [
+      "Use an external heat source to heat water efficiently",
+      "Ideal for homes with existing heating systems",
+      "Conserves energy and provides a consistent hot water supply",
+    ],
+  },
+  {
     color: "bg-pink-200",
     headingColor: "text-pink-950",
     title: "Water Filtration Systems",

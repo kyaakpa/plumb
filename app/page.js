@@ -9,7 +9,7 @@ export const metadata = {
 const Home = () => {
   return (
     <>
-      <div className="flex flex-col gap-6 ">
+      <div className="flex flex-col gap-2 md:gap-6 ">
         <div className="relative w-full h-full overflow-hidden">
           <div className="h-[100vh]">
             <img
@@ -24,10 +24,10 @@ const Home = () => {
           >
             <div className="flex flex-row gap-4 md:gap-8 p-4 items-center">
               <div className="max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto text-start text-white flex flex-col gap-2 md:gap-8  items-start ">
-                <h1 className="text-start text-xl md:text-4xl lg:text-6xl font-bold mb-4 justify-start">
+                <h1 className="text-start text-2xl md:text-4xl lg:text-6xl font-bold mb-4 justify-start">
                   Trusted Plumbing Experts Since 1986
                 </h1>
-                <p className="text-sm text-justify md:text-base leading-loose md:leading-relaxed pb-2 md:pb-8 ">
+                <p className="text-sm text-justify md:text-base md:leading-relaxed pb-2 md:pb-8 font-semibold">
                   Here at Mark J. Ahern Inc., we have been proudly serving
                   Boston and the surrounding areas since 1986. We are a small,
                   full-service company, which allows a close personal
@@ -53,7 +53,9 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <p className="text-sm md:text-base ">EPA RRP Certified</p>
+                    <p className="text-sm md:text-base font-semibold ">
+                      EPA RRP Certified
+                    </p>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -67,7 +69,9 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <p className="text-sm md:text-base ">Licensed</p>
+                    <p className="text-sm md:text-base font-semibold ">
+                      Licensed
+                    </p>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -81,7 +85,9 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <p className="text-sm md:text-base ">Fully Insured</p>
+                    <p className="text-sm md:text-base font-semibold ">
+                      Fully Insured
+                    </p>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -95,7 +101,9 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <p className="text-sm md:text-base ">Free Estimates</p>
+                    <p className="text-sm md:text-base font-semibold ">
+                      Free Estimates
+                    </p>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -109,7 +117,9 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <p className="text-sm md:text-base ">Family Operated</p>
+                    <p className="text-sm md:text-base font-semibold ">
+                      Family Operated
+                    </p>
                   </li>
                   <li className="flex items-center">
                     <svg
@@ -123,7 +133,7 @@ const Home = () => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <p className="text-sm md:text-base ">
+                    <p className="text-sm md:text-base font-semibold ">
                       MA Master Lic #10318
                     </p>
                   </li>
