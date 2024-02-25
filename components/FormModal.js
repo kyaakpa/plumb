@@ -13,6 +13,7 @@ import {
 } from "@nextui-org/react";
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function FormModal({ styling }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -55,116 +56,123 @@ export default function FormModal({ styling }) {
   };
 
   return (
-    <div
-      className={`${styling} max-lg:transition max-lg:ease-in max-lg:duration-250`}
-    >
+    <>
       <ToastContainer />
-      <Button
-        onPress={onOpen}
-        className="bg-primary/20 text-primary text-base max-lg:bg-blue-500 max-lg:text-white max-lg:animate-bounce max-lg:text-lg"
-      >
-        Contact Us
-      </Button>
-      <Modal
-        backdrop="blur"
-        isOpen={isOpen}
-        size="3xl"
-        className="max-sm:h-[70vh]"
-        onOpenChange={onOpenChange}
-        motionProps={{
-          variants: {
-            enter: {
-              y: 0,
-              opacity: 1,
-              transition: {
-                duration: 0.3,
-                ease: "easeOut",
-              },
-            },
-            exit: {
-              y: -20,
-              opacity: 0,
-              transition: {
-                duration: 0.2,
-                ease: "easeIn",
-              },
-            },
-          },
-        }}
-      >
-        <ModalContent>
-          {(onClose) => (
-            <>
-              <div className="flex">
-                <ModalHeader className="pr-8 ">
-                  {" "}
-                  Feel free to contact us
-                </ModalHeader>
-              </div>
-              <div className="flex w-full">
-                <ModalBody onSubmit={handleSubmit(onSubmit)}>
-                  <div className="flex flex-row gap-4">
-                    <Input
-                      type="text"
-                      label="First name"
-                      isRequired
-                      {...register("firstName", {
-                        required: "First name is required",
-                      })}
-                    />
-                    {errors.firstName && (
-                      <p className="text-red-500">{errors.firstName.message}</p>
-                    )}
-                    <Input
-                      type="text"
-                      label="Last name"
-                      isRequired
-                      {...register("lastName", {
-                        required: "Last name is required",
-                      })}
-                    />
-                    {errors.lastName && (
-                      <p className="text-red-500">{errors.lastName.message}</p>
-                    )}
-                  </div>
-                  <Input
-                    type="email"
-                    label="Email"
-                    isRequired
-                    {...register("email", { required: "Email is required" })}
-                  />
-                  {errors.email && (
-                    <p className="text-red-500">{errors.email.message}</p>
-                  )}
-                  <Input type="tel" label="Phone" {...register("phone")} />
-                  <Textarea
-                    type="text"
-                    label="How can we help you?"
-                    isRequired
-                    {...register("description", {
-                      required: "Description is required",
-                    })}
-                  />
-                </ModalBody>
-              </div>
 
-              <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
-                  Close
-                </Button>
-                <Button
-                  color="primary"
-                  onPress={handleSubmit(onSubmit)}
-                  type="submit"
-                  isLoading={isLoading}
-                >
-                  Submit
-                </Button>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
-    </div>
+      <div
+        className={`${styling} -mt-3 max-lg:transition max-lg:ease-in max-lg:duration-250`}
+      >
+        <Button
+          onPress={onOpen}
+          className="bg-primary/20 text-white font-semibold p-4 tracking-wide text-base max-lg:bg-blue-500 max-lg:text-white max-lg:text-lg"
+        >
+          Contact Us
+        </Button>
+        <Modal
+          backdrop="blur"
+          isOpen={isOpen}
+          size="3xl"
+          className="max-sm:h-[70vh]"
+          onOpenChange={onOpenChange}
+          motionProps={{
+            variants: {
+              enter: {
+                y: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.3,
+                  ease: "easeOut",
+                },
+              },
+              exit: {
+                y: -20,
+                opacity: 0,
+                transition: {
+                  duration: 0.2,
+                  ease: "easeIn",
+                },
+              },
+            },
+          }}
+        >
+          <ModalContent>
+            {(onClose) => (
+              <>
+                <div className="flex">
+                  <ModalHeader className="pr-8 ">
+                    {" "}
+                    Feel free to contact us
+                  </ModalHeader>
+                </div>
+                <div className="flex w-full">
+                  <ModalBody onSubmit={handleSubmit(onSubmit)}>
+                    <div className="flex flex-row gap-4">
+                      <Input
+                        type="text"
+                        label="First name"
+                        isRequired
+                        {...register("firstName", {
+                          required: "First name is required",
+                        })}
+                      />
+                      {errors.firstName && (
+                        <p className="text-red-500">
+                          {errors.firstName.message}
+                        </p>
+                      )}
+                      <Input
+                        type="text"
+                        label="Last name"
+                        isRequired
+                        {...register("lastName", {
+                          required: "Last name is required",
+                        })}
+                      />
+                      {errors.lastName && (
+                        <p className="text-red-500">
+                          {errors.lastName.message}
+                        </p>
+                      )}
+                    </div>
+                    <Input
+                      type="email"
+                      label="Email"
+                      isRequired
+                      {...register("email", { required: "Email is required" })}
+                    />
+                    {errors.email && (
+                      <p className="text-red-500">{errors.email.message}</p>
+                    )}
+                    <Input type="tel" label="Phone" {...register("phone")} />
+                    <Textarea
+                      type="text"
+                      label="How can we help you?"
+                      isRequired
+                      {...register("description", {
+                        required: "Description is required",
+                      })}
+                    />
+                  </ModalBody>
+                </div>
+
+                <ModalFooter>
+                  <Button color="danger" variant="light" onPress={onClose}>
+                    Close
+                  </Button>
+                  <Button
+                    color="primary"
+                    onPress={handleSubmit(onSubmit)}
+                    type="submit"
+                    isLoading={isLoading}
+                  >
+                    Submit
+                  </Button>
+                </ModalFooter>
+              </>
+            )}
+          </ModalContent>
+        </Modal>
+      </div>
+    </>
   );
 }
