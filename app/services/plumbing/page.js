@@ -12,7 +12,7 @@ const Plumbing = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="relative w-full h-full overflow-hidden">
-        <div className="h-[80vh] lg:h-[100vh]">
+        <div className="h-[100vh]">
           <Image
             src={`/front.webp`}
             alt="plumbing site"

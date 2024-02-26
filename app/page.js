@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <div className="flex flex-col gap-2 md:gap-6 ">
         <div className="relative w-full h-full overflow-hidden">
-          <div className="h-[80vh] md:h-[60vh] lg:h-[100vh]">
+          <div className="h-[100vh]">
             <Image
               src={`/front.webp`}
               className="object-cover"
@@ -21,7 +21,7 @@ const Home = () => {
             />
           </div>
           <div
-            className="absolute top-0 left-0 w-full h-full flex flex-col md:justify-center items-center backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40
+            className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40
 "
           >
             <div className="flex flex-row gap-4 md:gap-8 p-4 items-center">
