@@ -16,7 +16,6 @@ import {
 
 export const HamburgerItems = () => {
   const path = usePathname();
-
   const [isActive, setIsActive] = useState(false);
 
   const toggleMenu = () => {

@@ -5,7 +5,6 @@ import {
   Head,
   Html,
   Img,
-  Link,
   Preview,
   Row,
   Section,
@@ -113,8 +112,4 @@ const sectionBorder = {
 const sectionCenter = {
   borderBottom: "1px solid rgb(145,71,255)",
   width: "102px",
-};
-
-const link = {
-  textDecoration: "underline",
 };
