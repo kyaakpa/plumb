@@ -40,8 +40,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <footer className="flex px-8 max-md:px-4 items-center text-xs md:text-sm justify-between bg-black text-white py-4">
-        <div className="flex gap-4 ">
+      <footer className="flex px-8 max-md:px-2 items-center text-xs md:text-sm justify-between bg-black text-white py-4">
+        <div className="flex gap-4 max-sm:gap-2">
           <Link
             target="_blank"
             href="https://www.facebook.com/profile.php?id=61551657747301"
