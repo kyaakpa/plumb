@@ -1,4 +1,3 @@
-import { facebook } from "@/public/facebook.webp";
 import Image from "next/image";
 import Link from "next/link";
 import FormModal from "./FormModal";

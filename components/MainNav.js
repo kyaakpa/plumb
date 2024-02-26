@@ -27,7 +27,6 @@ import { HamburgerItems } from "./HamburgerItems";
 export default function MainNav() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const pathname = usePathname().toString();
-  console.log(pathname);
   const router = useRouter();
 
   const [isActive, setIsActive] = useState(false);
