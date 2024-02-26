@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react"; // Import React
+import React, { useState } from "react";
 import Link from "next/link";
-import "@/styles/hamburgers.css"; // Import hamburger CSS file (assuming it's located in the correct path)
+import "@/styles/hamburgers.css";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import {
@@ -11,11 +11,12 @@ import {
   HVACIcon,
   ValveIcon,
   PhoneIcon,
+  RebatesIcon,
 } from "./Icons";
 
 export const HamburgerItems = () => {
   const path = usePathname();
-  console.log(path);
+
   const [isActive, setIsActive] = useState(false);
 
   const toggleMenu = () => {
@@ -45,11 +46,18 @@ export const HamburgerItems = () => {
       icon: <ValveIcon />,
     },
     {
+      name: "Rebates",
+      link: "/rebates",
+      divider: true,
+      icon: <RebatesIcon />,
+    },
+    {
       name: "About Us",
       link: "/about",
       divider: true,
       icon: <AboutUsIcon />,
     },
+
     {
       name: "Contact",
       link: "/contact",
@@ -85,7 +93,7 @@ export const HamburgerItems = () => {
             }}
           >
             {menuItems.map((item, index) => (
-              <>
+              <React.Fragment key={index}>
                 {item.divider && <div className="border-t-1 my-2" />}
                 <Link
                   key={index}
@@ -115,7 +123,7 @@ export const HamburgerItems = () => {
                     )}
                   </motion.p>
                 </Link>
-              </>
+              </React.Fragment>
             ))}
           </div>
         </div>

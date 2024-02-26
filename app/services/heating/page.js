@@ -6,11 +6,13 @@ import ServiceCard from "@/components/ServiceCard";
 const Heating = () => {
   return (
     <div className="flex flex-col justify-center items-center">
+      <title>Heating Services</title>
       <div className="relative w-full h-full overflow-hidden">
         <div className="h-[100vh]">
           <Image
             src={`/front.webp`}
             alt="plumbing site"
+            className="object-cover min-h-screen"
             width={1920}
             height={1080}
           />

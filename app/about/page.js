@@ -19,7 +19,7 @@ const About = () => {
             height={1080}
           />
           <div className=" backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40 absolute top-0 h-full w-full px-2 md:px-60 lg:h-[50vh] max-lg:h-[50vh] text-5xl font-bold flex max-lg:flex-col justify-between items-center mx-auto">
-            <h1 className="text-gray-100 max-lg:pt-20 opacity-100 tracking-tight">
+            <h1 className="text-white max-lg:pt-20 opacity-100 tracking-tight">
               About Us
             </h1>
             <div className="self-end max-lg:self-center overflow-hidden">

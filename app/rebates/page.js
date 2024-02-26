@@ -6,6 +6,7 @@ import Image from "next/image";
 const Rebates = () => {
   return (
     <div className="flex flex-col gap-6 " id="/">
+      <title>Rebates</title>
       <div className="relative w-full h-full overflow-hidden">
         <div className="h-[100vh]">
           <Image

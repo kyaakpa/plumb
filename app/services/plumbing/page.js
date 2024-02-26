@@ -16,6 +16,7 @@ const Plumbing = () => {
           <Image
             src={`/front.webp`}
             alt="plumbing site"
+            className="object-cover min-h-screen"
             width={1920}
             height={1080}
           />

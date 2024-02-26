@@ -12,7 +12,12 @@
   .input-form {
     @apply p-3 rounded-xl outline-none border  bg-transparent;
   }
+
+  .error-message {
+    @apply text-red-500 -my-2 ml-2 text-sm;
+  }
 }
+
 ::-webkit-scrollbar {
   width: 10px;
 }

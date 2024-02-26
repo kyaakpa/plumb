@@ -14,7 +14,7 @@ const Home = () => {
           <div className="h-[100vh]">
             <Image
               src={`/front.webp`}
-              className="object-cover"
+              className="object-cover min-h-screen"
               alt="plumbing site"
               width={1920}
               height={1080}
@@ -143,8 +143,9 @@ const Home = () => {
               </div>
               <div className="hidden lg:flex">
                 <Image
-                  src={"/cambridge.webp"}
-                  alt="cambridge"
+                  src={"/markfamilyNocrop.webp"}
+                  alt="Family photo"
+                  className="min-w-[400px] "
                   width={600}
                   height={400}
                 />

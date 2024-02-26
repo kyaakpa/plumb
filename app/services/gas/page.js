@@ -6,11 +6,12 @@ import ServiceCard from "@/components/ServiceCard";
 const Gas = () => {
   return (
     <div className="flex flex-col justify-center items-center">
+      <title>Gas Services</title>
       <div className="relative w-full h-full overflow-hidden">
         <div className="h-[100vh]">
           <Image
             src={`/front.webp`}
-            o
+            className="object-cover min-h-screen z-10"
             alt="plumbing site"
             width={1920}
             height={1080}

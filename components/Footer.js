@@ -11,7 +11,7 @@ const Footer = () => {
             Have a plumbing emergency?
             <span> Call us now!</span>
           </h1>
-          <FormModal />
+          <FormModal styling="bg-blue-500 rounded-lg " />
         </div>
 
         <div className="flex flex-col md:flex-row items-start gap-2 md:gap-24 ">
@@ -29,6 +29,7 @@ const Footer = () => {
             </h1>
             <p className="text-xs md:text-base">Phone: (617) 492-5198</p>
             <p className="text-xs md:text-base">Fax: (617) 864-0295</p>
+
             <Link
               href="mailto:Mark@Markjaherninc.com"
               className="hover:cursor-pointer"
@@ -40,8 +41,19 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <footer className="flex flex-col items-center text-xs md:text-sm justify-center bg-black text-white py-4">
-        <p>© 2024 All Rights Reserved | Mark J. Ahern, Inc. </p>
+      <footer className="flex px-8 max-md:px-4 items-center text-xs md:text-sm justify-between bg-black text-white py-4">
+        <div className="flex gap-4 ">
+          <Link
+            target="_blank"
+            href="https://www.facebook.com/profile.php?id=61551657747301"
+          >
+            Facebook
+          </Link>
+          <Link href="#">Instagram</Link>
+        </div>
+        <p className="place-self-end">
+          © 2024 All Rights Reserved | Mark J. Ahern, Inc.{" "}
+        </p>
       </footer>
     </div>
   );

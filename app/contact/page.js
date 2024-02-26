@@ -50,6 +50,7 @@ const Page = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="flex flex-col justify-center items-center"
     >
+      <title>Contact Us</title>
       <div className="relative w-full h-full overflow-hidden">
         <div className="h-[100vh]">
           <Image src={`/front.webp`} alt="plumbing site" layout="fill" />
@@ -137,26 +138,23 @@ const Page = () => {
                   )}
                 </div>
                 <Input
-                  type="email"
+                  type="text"
                   label="Email"
                   isRequired
-                  {...register("email", { required: "Email is required" })}
+                  {...register("email", {
+                    required: true,
+                    pattern: /^\S+@\S+$/i,
+                  })}
                 />
                 {errors.email && (
-                  <p className="text-red-500">{errors.email.message}</p>
+                  <p className="error-message">Please enter a valid email.</p>
                 )}
-                <Input type="tel" label="Phone" {...register("phone")} />
+                <Input type="number" label="Phone" {...register("phone")} />
                 <Textarea
                   type="text"
                   label="How can we help you?"
-                  isRequired
-                  {...register("description", {
-                    required: "Description is required",
-                  })}
+                  {...register("description")}
                 />
-                {errors.description && (
-                  <p className="text-red-500">{errors.description.message}</p>
-                )}
               </div>
               <Button
                 color="primary"
