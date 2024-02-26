@@ -51,7 +51,7 @@ const Page = () => {
       className="flex flex-col justify-center items-center"
     >
       <div className="relative w-full h-full overflow-hidden">
-        <div className="h-[100vh]">
+        <div className="h-[80vh] lg:h-[100vh]">
           <Image src={`/front.webp`} alt="plumbing site" layout="fill" />
         </div>
         <div
@@ -60,7 +60,7 @@ const Page = () => {
         >
           <div className="flex flex-row w-full px-6 lg:px-32 items-start justify-between gap-4">
             <div className="flex flex-col w-full lg:w-1/2 p-4 items-start justify-start">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold  text-white ">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold  text-white pb-6">
                 Contact Us
               </h1>
               <p className="md:text-lg text-gray-100 mt-4">

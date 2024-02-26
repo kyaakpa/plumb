@@ -11,23 +11,25 @@ const Home = () => {
     <>
       <div className="flex flex-col gap-2 md:gap-6 ">
         <div className="relative w-full h-full overflow-hidden">
-          <div className="h-[100vh]">
-            <img
+          <div className="h-[80vh] md:h-[60vh] lg:h-[100vh]">
+            <Image
               src={`/front.webp`}
               className="object-cover"
               alt="plumbing site"
+              width={1920}
+              height={1080}
             />
           </div>
           <div
-            className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40
+            className="absolute top-0 left-0 w-full h-full flex flex-col md:justify-center items-center backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40
 "
           >
             <div className="flex flex-row gap-4 md:gap-8 p-4 items-center">
               <div className="max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto text-start text-white flex flex-col gap-2 md:gap-8  items-start ">
-                <h1 className="text-start text-2xl md:text-4xl lg:text-6xl font-bold mb-4 justify-start">
+                <h1 className="text-start text-3xl md:text-4xl lg:text-6xl font-bold mb-4 justify-start">
                   Trusted Plumbing Experts Since 1986
                 </h1>
-                <p className="text-sm text-justify md:text-base md:leading-relaxed pb-2 md:pb-8 font-semibold">
+                <p className="text-sm text-justify md:text-lg md:leading-relaxed pb-6 md:pb-12 font-semibold">
                   Here at Mark J. Ahern Inc., we have been proudly serving
                   Boston and the surrounding areas since 1986. We are a small,
                   full-service company, which allows a close personal
@@ -140,7 +142,7 @@ const Home = () => {
                 </ul>
               </div>
               <div className="hidden lg:flex">
-                <img
+                <Image
                   src={"/cambridge.webp"}
                   alt="cambridge"
                   width={600}
@@ -152,7 +154,7 @@ const Home = () => {
         </div>
         <div className="flex flex-row items-center justify-center  py-2 md:py-6 w-full">
           <div
-            className="flex flex-col items-center justify-center gap-2 md:gap-4 px-2 md:px-6"
+            className="flex flex-col items-center justify-center gap-2 md:gap-4 px-4 md:px-6"
             id="services-section"
           >
             <h1 className="text-center text-xl md:text-4xl font-bold mb-1 md:mb-2">
@@ -271,7 +273,7 @@ const Home = () => {
             <h1 className="text-center text-base md:text-3xl  font-bold mb-4">
               Preferred Heating Product Manufacturers
             </h1>
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8 lg:gap-12 ">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8 lg:gap-12 ">
               <div className="w-20 h-20 md:w-40 md:h-40 flex items-center justify-center">
                 <Image src={`/htp.jpg`} width={200} height={200} alt="HTP" />
               </div>

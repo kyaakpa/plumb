@@ -1,13 +1,19 @@
 "use client";
 import { Code } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Rebates = () => {
   return (
     <div className="flex flex-col gap-6 " id="/">
       <div className="relative w-full h-full overflow-hidden">
         <div className="h-[100vh]">
-          <img src={`/front.webp`} alt="plumbing site" />
+          <Image
+            src={`/front.webp`}
+            alt="plumbing site"
+            width={1920}
+            height={1080}
+          />
         </div>
         <div
           className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center backdrop-filter backdrop-blur-sm bg-gray-900 bg-opacity-40
