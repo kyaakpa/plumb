@@ -22,7 +22,6 @@ import Image from "next/image";
 import { ChevronDown, PhoneIcon } from "@/components/Icons";
 import logo from "@/public/logo-black.webp";
 import { useRouter, usePathname } from "next/navigation";
-import { HamburgerItems } from "./HamburgerItems";
 import Sidebar from "./Sidebar";
 
 export default function MainNav() {
