@@ -135,3 +135,80 @@ export const RebatesIcon = () => {
     </svg>
   );
 };
+
+export const CrossIcon = () => {
+  return (
+    <svg
+      class="w-6 h-6 text-gray-800 dark:text-white"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M6 18 18 6m0 12L6 6"
+      />
+    </svg>
+  );
+};
+
+export const FacebookIcon = () => {
+  return (
+    <svg
+      class="w-6 h-6 text-gray-800 dark:text-white"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M13.1 6H15V3h-1.9A4.1 4.1 0 0 0 9 7.1V9H7v3h2v10h3V12h2l.6-3H12V6.6a.6.6 0 0 1 .6-.6h.5Z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  );
+};
+
+export const InstagramIcon = () => {
+  return (
+    <svg
+      class="w-6 h-6 text-gray-800 dark:text-white"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M3 11C3 7.22876 3 5.34315 4.17157 4.17157C5.34315 3 7.22876 3 11 3H13C16.7712 3 18.6569 3 19.8284 4.17157C21 5.34315 21 7.22876 21 11V13C21 16.7712 21 18.6569 19.8284 19.8284C18.6569 21 16.7712 21 13 21H11C7.22876 21 5.34315 21 4.17157 19.8284C3 18.6569 3 16.7712 3 13V11Z"
+        stroke="#33363F"
+        stroke-width="2"
+      />
+      <circle cx="16.5" cy="7.5" r="1.5" fill="#33363F" />
+      <circle cx="12" cy="12" r="3" stroke="#33363F" stroke-width="2" />
+    </svg>
+  );
+};
+
+export const Hamburger = () => {
+  return (
+    <svg
+      className="w-6 h-6 text-gray-800 dark:text-white"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="2"
+        d="M5 7h14M5 12h14M5 17h14"
+      />
+    </svg>
+  );
+};
