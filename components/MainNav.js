@@ -58,6 +58,7 @@ export default function MainNav() {
         className="lg:hidden"
         onClick={() => handleClick()}
       >
+        test
         <Sidebar />
       </NavbarContent>
 
