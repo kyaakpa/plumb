@@ -76,14 +76,14 @@ const Page = () => {
                   <h1 className="text-lg lg:text-3xl font-semibold mb-2 text-white">
                     ADDRESS
                   </h1>
-                  <p className="text-xs lg:text-lg text-gray-100  ">
+                  <p className="text-xs md:text-lg text-gray-100  ">
                     Mark J. Ahern, Inc.{" "}
                   </p>
                   <p className="text-xs md:text-lg text-gray-100  ">
-                    Lynnfield, MA 01940
+                    Medford, MA 02155
                   </p>
                   <p className="text-xs md:text-lg text-gray-100  ">
-                    4 Cortland Lane
+                    19 Linden Street
                   </p>
                 </div>
                 <div className="flex flex-col w-full mt-4">
@@ -101,7 +101,7 @@ const Page = () => {
                     className="hover:cursor-pointer"
                   >
                     <p className="inline-block border-b border-blue-400 text-blue-400 text-xs md:text-lg">
-                      Mark@Markjaherninc.com
+                      Markjaherninc@gmail.com
                     </p>
                   </Link>
                 </div>

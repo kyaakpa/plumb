@@ -2,6 +2,7 @@
 import { Code } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Rebates = () => {
   return (
@@ -38,7 +39,7 @@ const Rebates = () => {
                 animate="visible"
                 className="md:text-2xl lg:text-3xl p-6 bg-gray-50"
               >
-                <li>Mass SAVE Incentives Available</li>
+                <li>MASS SAVE Incentives Available</li>
                 <li>
                   <Code className=" md:text-2xl lg:text-3xl bg-green-100 text-green-600">
                     10% OFF
@@ -84,6 +85,17 @@ const Rebates = () => {
                 $250 for boiler replacement
               </motion.h2>
             </div>
+            <p className="text-gray-50">
+              Click{" "}
+              <Link
+                href="https://www.masssave.com/en/residential?utm_source=google&utm_campaign=Mass-Save_Brand_Residential_24&utm_medium=cpc&utm_content=Awareness_Residential_Exact&utm_term=mass%20save&gad_source=1"
+                target="_blank"
+                className="text-blue-800 underline"
+              >
+                here
+              </Link>{" "}
+              to get 10% off from mass save.
+            </p>
             <p className="mt-4 md:mt-12 self-start text-gray-100 text-sm md:text-base">
               Yearly Maintenance Membership includes a fall meeting to check
               your heating system and ensure proper functionality.*

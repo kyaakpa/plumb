@@ -55,8 +55,8 @@ export const Email = ({
         <Section style={footer}>
           <Row>
             <Text style={{ textAlign: "center", color: "#706a7b" }}>
-              © 2024 All Rights Reserved | Mark J. Ahern, Inc. <br />4 Cortland
-              Lane Lynnfield, MA 01940
+              © 2024 All Rights Reserved | Mark J. Ahern, Inc. <br />
+              19 Linden Street, Medford, MA 02155
             </Text>
           </Row>
         </Section>

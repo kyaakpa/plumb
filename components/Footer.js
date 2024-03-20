@@ -19,8 +19,8 @@ const Footer = () => {
               Mailing Address
             </h1>
             <p className="text-xs md:text-base">Mark J. Ahern Inc.</p>
-            <p className="text-xs md:text-base">4 Cortland Lane Lynnfield,</p>
-            <p className="text-xs md:text-base">MA 01940</p>
+            <p className="text-xs md:text-base">19 Linden Street, Medford</p>
+            <p className="text-xs md:text-base">MA 02155</p>
           </div>
           <div className="gap-1 md:gap-4">
             <h1 className="text-start text-sm md:text-lg lg:text-xl font-bold mb-1 md:mb-4">
@@ -34,7 +34,7 @@ const Footer = () => {
               className="hover:cursor-pointer"
             >
               <p className="inline-block border-b border-blue-400 text-blue-400 text-xs md:text-base">
-                Mark@Markjaherninc.com
+                Markjaherninc@gmail.com
               </p>
             </Link>
           </div>
