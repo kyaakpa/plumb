@@ -27,7 +27,6 @@ const Footer = () => {
               Contact Information
             </h1>
             <p className="text-xs md:text-base">Phone: (617) 492-5198</p>
-            <p className="text-xs md:text-base">Fax: (617) 864-0295</p>
 
             <Link
               href="mailto:Mark@Markjaherninc.com"
