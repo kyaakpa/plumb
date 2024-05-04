@@ -20,7 +20,7 @@ export async function POST(req) {
 
     const mailOptions = {
       from: `${firstName} ${lastName}`,
-      to: "kyaakpalama@gmail.com",
+      to: "markjaherninc@gmail.com",
       subject: "You have a new email from your website",
       html: `
         <div style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 20px;">
