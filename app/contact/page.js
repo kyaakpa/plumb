@@ -14,7 +14,7 @@ const Page = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const localURL = "https://markjahern.com/api/send";
+  const localURL = "https://www.markjahern.com/api/send";
 
   const [isLoading, setIsLoading] = useState(false);
   const onSubmit = async (data, e) => {
