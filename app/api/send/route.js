@@ -21,7 +21,7 @@ export async function POST(req) {
 
   try {
     await resend.emails.send({
-      from: `${firstName + " " + lastName} <markjahern.com>`,
+      from: `${firstName + " " + lastName} <onboarding@resend.dev>`,
       to: ["kyaakpalama@gmail.com"],
       subject: "We have received your message",
       react: (
