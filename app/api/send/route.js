@@ -2,6 +2,17 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { Email } from "./email";
 
+export async function OPTIONS(req) {
+  const response = NextResponse.next();
+  response.headers.set(
+    "Access-Control-Allow-Origin",
+    "https://www.markjahern.com"
+  );
+  response.headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
+  response.headers.set("Access-Control-Allow-Headers", "Content-Type");
+  return response;
+}
+
 export async function POST(req) {
   const form = await req.json();
   const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
