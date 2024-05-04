@@ -21,7 +21,7 @@ export async function POST(req) {
     // Define the email options
     const mailOptions = {
       from: `${firstName + " " + lastName} <your-email@example.com>`,
-      to: "kyaakpalama@gmail.com",
+      to: "pallawmgr20@gmail.com",
       subject: "We have received your message",
       text: `
         Name: ${firstName} ${lastName}
@@ -31,12 +31,12 @@ export async function POST(req) {
         Date: ${new Date()}
       `,
     };
-
+    console.log(mailOptions);
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ message: "ok" });
   } catch (error) {
-    console.error(error);
+    console.log(error);
     return NextResponse.json({ message: "failed" });
   }
 }
