@@ -25,7 +25,7 @@ export default function FormModal({ styling }) {
   } = useForm();
 
   const [isLoading, setIsLoading] = useState(false);
-  const localURL = "http://localhost:3000/api/send";
+  const localURL = "https://markjahern.com/api/send";
 
   const onSubmit = async (data) => {
     setIsLoading(true);
