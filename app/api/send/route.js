@@ -13,16 +13,15 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "pallaw020@gmail.com",
-        pass: "pepb qtzj vlzg ynoi",
+        user: "webtion6@gmail.com",
+        pass: "cplv ggcd ammb zinj",
       },
     });
 
-    // Define the email options
     const mailOptions = {
-      from: `${firstName + " " + lastName} <your-email@example.com>`,
-      to: "pallawmgr20@gmail.com",
-      subject: "We have received your message",
+      from: `${firstName + " " + lastName}`,
+      to: "kyaakpalama@gmail.com",
+      subject: "You have a new email from your website",
       text: `
         Name: ${firstName} ${lastName}
         Description: ${description}
@@ -31,12 +30,10 @@ export async function POST(req) {
         Date: ${new Date()}
       `,
     };
-    console.log(mailOptions);
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ message: "ok" });
   } catch (error) {
-    console.log(error);
     return NextResponse.json({ message: "failed" });
   }
 }
