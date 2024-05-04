@@ -19,21 +19,26 @@ export async function POST(req) {
     });
 
     const mailOptions = {
-      from: `${firstName + " " + lastName}`,
+      from: `${firstName} ${lastName}`,
       to: "kyaakpalama@gmail.com",
       subject: "You have a new email from your website",
-      text: `
-        Name: ${firstName} ${lastName}
-        Description: ${description}
-        Phone: ${phone}
-        Email: ${email}
-        Date: ${new Date()}
+      html: `
+        <div style="font-family: Arial, sans-serif; background-color: #f5f5f5; padding: 20px;">
+          <h2 style="color: #333333;">You have a new message from your website</h2>
+          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone}</p>
+          <p><strong>Message:</strong></p>
+          <p>${description}</p>
+          <p><strong>Date:</strong> ${new Date()}</p>
+        </div>
       `,
     };
-    await transporter.sendMail(mailOptions);
 
+    await transporter.sendMail(mailOptions);
     return NextResponse.json({ message: "ok" });
   } catch (error) {
+    console.error(error);
     return NextResponse.json({ message: "failed" });
   }
 }
