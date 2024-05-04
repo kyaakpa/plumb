@@ -9,6 +9,12 @@ export const heatingServices = [
     title: "Steam Boilers/Systems",
   },
   {
+    title: "Minisplits",
+  },
+  {
+    title: "HVAC Systems",
+  },
+  {
     title: "Forced Hot Air",
   },
   {

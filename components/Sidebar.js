@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { CrossIcon, FacebookIcon, Hamburger, InstagramIcon } from "./Icons";
 import { Divider } from "@nextui-org/react";
 import Link from "next/link";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,10 +75,10 @@ const Sidebar = () => {
                 href="https://www.facebook.com/profile.php?id=61551657747301"
                 target="_blank"
               >
-                <FacebookIcon />
+                <FaFacebookSquare size={32} />
               </Link>
               <Link href="#">
-                <InstagramIcon />
+                <FaInstagram size={32} />
               </Link>
             </div>
           </div>

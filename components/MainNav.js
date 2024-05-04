@@ -5,9 +5,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
   Link,
   Button,
   DropdownItem,
@@ -15,7 +12,6 @@ import {
   Dropdown,
   DropdownMenu,
 } from "@nextui-org/react";
-import "@/styles/hamburgers.css";
 
 import { useState } from "react";
 import Image from "next/image";

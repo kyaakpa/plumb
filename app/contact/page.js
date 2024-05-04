@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import Image from "next/image";
+import axios from "axios";
 
 const Page = () => {
   const {
@@ -13,19 +14,17 @@ const Page = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const localURL = "https://markjahern.com/api/send";
+  const localURL = "https://www.markjahern.com/api/send";
 
   const [isLoading, setIsLoading] = useState(false);
   const onSubmit = async (data, e) => {
     setIsLoading(true);
     e.preventDefault();
     try {
-      const response = await fetch(localURL, {
-        method: "POST",
+      const response = await axios.post(localURL, data, {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
       });
 
       const serverResponse = response.status;
@@ -76,14 +75,14 @@ const Page = () => {
                   <h1 className="text-lg lg:text-3xl font-semibold mb-2 text-white">
                     ADDRESS
                   </h1>
-                  <p className="text-xs lg:text-lg text-gray-100  ">
+                  <p className="text-xs md:text-lg text-gray-100  ">
                     Mark J. Ahern, Inc.{" "}
                   </p>
                   <p className="text-xs md:text-lg text-gray-100  ">
-                    Lynnfield, MA 01940
+                    Medford, MA 02155
                   </p>
                   <p className="text-xs md:text-lg text-gray-100  ">
-                    4 Cortland Lane
+                    19 Linden Street
                   </p>
                 </div>
                 <div className="flex flex-col w-full mt-4">
@@ -93,15 +92,13 @@ const Page = () => {
                   <p className="text-xs md:text-lg text-gray-100  ">
                     Phone: (617) 492-5198
                   </p>
-                  <p className="text-xs md:text-lg text-gray-100  ">
-                    Fax: (617) 864-0295
-                  </p>
+
                   <Link
                     href="mailto:Mark@Markjaherninc.com"
                     className="hover:cursor-pointer"
                   >
                     <p className="inline-block border-b border-blue-400 text-blue-400 text-xs md:text-lg">
-                      Mark@Markjaherninc.com
+                      Markjaherninc@gmail.com
                     </p>
                   </Link>
                 </div>

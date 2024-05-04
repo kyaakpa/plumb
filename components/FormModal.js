@@ -25,17 +25,15 @@ export default function FormModal({ styling }) {
   } = useForm();
 
   const [isLoading, setIsLoading] = useState(false);
-  const localURL = "http://localhost:3000/api/send";
+  const localURL = "https://www.markjahern.com/api/send";
 
   const onSubmit = async (data) => {
     setIsLoading(true);
     try {
-      const response = await fetch(localURL, {
-        method: "POST",
+      const response = await axios.post(localURL, data, {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
       });
 
       const serverResponse = response.status;
