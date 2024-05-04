@@ -14,6 +14,7 @@ import {
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 export default function FormModal({ styling }) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
