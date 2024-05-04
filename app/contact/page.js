@@ -20,12 +20,10 @@ const Page = () => {
     setIsLoading(true);
     e.preventDefault();
     try {
-      const response = await fetch(localURL, {
-        method: "POST",
+      const response = await axios.post(localURL, data, {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
       });
 
       const serverResponse = response.status;
